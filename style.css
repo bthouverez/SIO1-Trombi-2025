@@ -1,4 +1,4 @@
-/* Style maximal pour l'élément #KUS */
+/* --- BASE IDENTIQUE (Ton code d'origine) --- */
 #KUS {
     background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
     background-size: 300% 300%;
@@ -16,27 +16,44 @@
     font-family: 'Arial', sans-serif;
     font-size: 2em;
     font-weight: bold;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    
+    /* MODIFICATION ICI : Transition plus complexe pour l'effet "fou" */
+    /* On anime tout (all) avec une courbe de bézier qui fait un effet "élastique/rebond" */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Animation du dégradé de fond */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Effets au survol de #KUS */
+/* --- LE SURVOL (C'EST ICI QUE ÇA DEVIENT FOU) --- */
 #KUS:hover {
-    transform: scale(1.1) rotate(5deg);
+    /* 1. Zoom violent + Rotation inverse + Montée vers le haut */
+    transform: scale(1.2) rotate(-3deg) translateY(-15px);
+
+    /* 2. Changement radical des couleurs (inverse le spectre) */
+    filter: hue-rotate(180deg) brightness(1.3);
+
+    /* 3. L'ombre devient une supernova multicolore */
     box-shadow: 
-        0 0 20px rgba(0, 255, 255, 1), 
-        0 0 40px rgba(0, 212, 255, 1), 
-        0 0 60px rgba(123, 104, 238, 1), 
-        0 0 80px rgba(255, 105, 180, 1);
+        0 0 30px rgba(0, 255, 255, 1), 
+        0 0 60px rgba(255, 0, 255, 1), 
+        0 0 90px rgba(255, 255, 0, 1), /* Jaune ajouté pour le flash */
+        inset 0 0 50px rgba(255, 255, 255, 0.8); /* Lumière intérieure */
+
+    /* 4. La bordure devient blanche pure et solide */
+    border: 8px solid #ffffff;
+    
+    /* 5. Le texte s'écarte pour prendre de la place */
+    letter-spacing: 5px;
+    
+    /* Curseur de main pour inciter au clic */
+    cursor: pointer;
 }
 
-/* Texte animé au-dessus de l'élément #KUS */
+/* Texte animé au-dessus (Ton code d'origine) */
 #KUS::before {
     content: "✨ Bienvenue chez Yekzan ✨";
     display: block;
@@ -47,5 +64,19 @@
         0 0 10px rgba(255, 255, 255, 0.8), 
         0 0 20px rgba(0, 255, 255, 0.8);
     animation: textGlow 1.5s infinite alternate;
+    
+    /* Petit ajout : transition fluide aussi pour le texte */
+    transition: all 0.4s ease;
 }
 
+/* Ajout : Le texte du dessus grossit aussi au survol */
+#KUS:hover::before {
+    text-shadow: 0 0 30px white;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+@keyframes textGlow {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 20px white; }
+}
