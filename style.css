@@ -1,3 +1,136 @@
+/* Carte */
+#CHAPITEAU {
+    background: linear-gradient(135deg, #87CEFA, #1E3A8A); /* Bleu clair -> bleu foncé */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* Dégradé animé */
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 4px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animation du fond dégradé */
+#EGEA {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 3px solid;
+  border-image: linear-gradient(135deg, #1976d2, #42a5f5, #64b5f6, #2196f3) 1;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#EGEA::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0d47a1, #1976d2, #42a5f5, #64b5f6, #90caf9);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: gradient-border 4s ease infinite;
+}
+
+#EGEA:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+}
+
+#EGEA img {
+  transition: all 0.4s ease;
+  border-radius: 8px;
+}
+
+#EGEA:hover img {
+  transform: scale(1.08) rotate(2deg);
+  filter: brightness(1.1);
+}
+
+#EGEA p {
+  color: #0d47a1;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+#THOUVEREZ {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background: #21BF33;
+        background: linear-gradient(299deg,rgba(33, 191, 51, 1) 0%, rgba(243, 255, 13, 1) 40%, rgba(255, 13, 13, 1) 100%, rgba(237, 83, 83, 1) 100%);
+    border-radius: 15px;
+    border: 0px;
+       font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#THOUVEREZ img {
+    border-radius: 15px;
+}
+
+#THOUVEREZ  {
+  /* 1. Définit l'animation de transformation sur 1 seconde */
+  transition: transform 1s; 
+}
+
+#THOUVEREZ :hover {
+  /* 2. Applique une rotation de 360 degrés au survol */
+  transform: rotate(360deg); 
+}
+
+/* =========================================
+   STYLE PERSONNALISÉ "ULTIMATE RGB" POUR LILLIAN
+   ========================================= */
+
+/* 0. Importation de la police futuriste "Orbitron" depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* 1. Animation des couleurs RGB (Bordure + Ombre) */
+@keyframes rgb-glow-lillian {
+    0%   { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+    17%  { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; }
+    33%  { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+    50%  { border-color: #00ffff; box-shadow: 0 0 15px #00ffff; }
+    67%  { border-color: #0000ff; box-shadow: 0 0 15px #0000ff; }
+    83%  { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
+    100% { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+}
+
+/* 2. Animation de Lévitation (Flottement) */
+@keyframes float-lillian {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 3. Animation du FOND (Background) Liquide */
+@keyframes rainbow-bg {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
 #KUS {
     background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
@@ -27,7 +160,53 @@
     100% { background-position: 0% 50%; }
 }
 
+/* Image avec cadre néon animé */
+#CHAPITEAU img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ffea, #0ff);
+    background-size: 400% 400%;
+    animation: neonBorder 6s linear infinite;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
 
+/* Animation du cadre néon */
+@keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Rotation de la photo au survol */
+#CHAPITEAU:hover img {
+    transform: rotate(10deg) scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+/* Nom/prénom en gris clair avec ombre subtile */
+#CHAPITEAU p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    transition: transform 0.8s ease, color 0.4s ease;
+}
+
+/* Rotation du texte au survol */
+#CHAPITEAU:hover p {
+    transform: rotate(360deg);
+    color: #00ffff;
+
+}
+
+/* --- LE SURVOL (C'EST ICI QUE ÇA DEVIENT FOU) --- */
 #KUS:hover {
    
     transform: scale(1.2) rotate(-3deg) translateY(-15px);

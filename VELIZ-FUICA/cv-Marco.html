@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marco VELIZ FUICA — CV</title>
+  <style>
+    :root{--accent:#0b5fff;--muted:#6b7280;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f7fafc;color:#0f172a;font-family:var(--font, Inter),sans-serif;line-height:1.45}
+    .container{max-width:900px;margin:32px auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.08)}
+    header{display:flex;gap:24px;padding:28px 32px;background:linear-gradient(90deg,var(--accent),#3aa0ff);color:#fff;align-items:center}
+    .name{font-size:28px;font-weight:700;margin:0}
+    .title{opacity:.95;margin:4px 0 0;font-weight:600}
+    .contact{margin-left:auto;text-align:right}
+    .contact a{color:rgba(255,255,255,0.95);text-decoration:none;display:block}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:28px;padding:28px}
+    section{padding:8px 0}
+    h2{font-size:14px;margin:0 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+
+    .summary{font-size:15px;color:#111827}
+    .card{background:#fff;padding:12px;border-radius:8px}
+
+    .list{list-style:none;padding:0;margin:0}
+    .item{margin-bottom:12px}
+    .role{font-weight:700}
+    .meta{font-size:13px;color:var(--muted)}
+
+    .right{background:#f8fafc;border-left:1px solid #eef2f7;padding-left:20px}
+    .profile p{margin:0 0 8px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;color:#0b3bff;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    footer{padding:18px 32px;background:#fff;border-top:1px solid #eef2f7;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){main{grid-template-columns:1fr;padding:18px}header{flex-wrap:wrap}.contact{text-align:left;margin-left:0;width:100%}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="VELIZ-FUICAphoto-Marco.png" alt="Photo" style="width:120px;height:120px;border-radius:50%;object-fit:cover;">
+      <div>
+        <h1 class="name">Marco VELIZ FUICA</h1>
+        <div class="title">Etudiant BTS SIO — Option SLAM (en cours)</div>
+      </div>
+      <div class="contact">
+        <a href="mailto:marco.velizfuica@gmail.com">marco.velizfuica@gmail.com</a>
+        <div>06 21 29 52 79</div>
+        <div>Lyon 7, France</div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section>
+          <h2>Objectif</h2>
+          <div class="card summary">
+            Recherche d’un stage en informatique ou en programmation — <strong>du 25 mai au 26 juin 2026</strong>.
+          </div>
+        </section>
+
+        <section>
+          <h2>Expériences</h2>
+          <ul class="list">
+            <li class="item card">
+              <div class="role">Pc-Réparation — Stagiaire</div>
+              <div class="meta">Lyon — Décembre 2023 - Janvier 2024</div>
+              <div>Maintenance et réparation de systèmes informatiques : montage d’ordinateurs, récupération de données, installations et mises à jour.</div>
+            </li>
+
+            <li class="item card">
+              <div class="role">AB‑Secure — Stagiaire</div>
+              <div class="meta">Lyon — Janvier 2024 - Septembre 2022 (voir CV original pour la chronologie exacte).</div>
+              <div>Remise à zéro et configuration de systèmes d’alarme. Utilisation de Risco Configuration Software.</div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Formation</h2>
+          <ul class="list">
+            <li class="item card">
+              <div class="role">BTS SIO — Option SLAM (en cours)</div>
+              <div class="meta">CSND, Limas — 2025-2027 (en cours)</div>
+            </li>
+
+            <li class="item card">
+              <div class="role">Bac pro Systèmes numériques — Option RISC</div>
+              <div class="meta">La Mâche, Lyon — 2023-2024</div>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Compétences</h2>
+          <div class="card">
+            <div class="skills">
+              <span class="skill">Installation & maintenance</span>
+              <span class="skill">Windows Server 2019</span>
+              <span class="skill">Montage d'ordinateurs</span>
+              <span class="skill">Risco Configuration Software</span>
+              <span class="skill">Bases Python</span>
+              <span class="skill">Bases C</span>
+              <span class="skill">Certification PIX</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="right">
+        <section class="profile">
+          <h2>Contact</h2>
+          <p>marco.velizfuica@gmail.com<br>06 21 29 52 79</p>
+        </section>
+
+        <section>
+          <h2>Langues</h2>
+          <div class="card">
+            <p>Anglais — C1</p>
+            <p>Espagnol — B2</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Centres d'intérêt</h2>
+          <div class="card">
+            <p>Dessin</p>
+            <p>Lecture</p>
+          </div>
+        </section>
+
+
+      </aside>
+    </main>
+
+    <footer>
+     
+    </footer>
+  </div>
+</body>
+</html>
