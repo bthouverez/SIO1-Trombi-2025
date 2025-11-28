@@ -8,6 +8,7 @@
   position: relative;
   overflow: hidden;
 }
+<<<<<<< HEAD
 
 #EGEA::before {
   content: '';
@@ -55,3 +56,147 @@
     background-position: 0% 50%;
   }
 }
+=======
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+#THOUVEREZ {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background: #21BF33;
+        background: linear-gradient(299deg,rgba(33, 191, 51, 1) 0%, rgba(243, 255, 13, 1) 40%, rgba(255, 13, 13, 1) 100%, rgba(237, 83, 83, 1) 100%);
+    border-radius: 15px;
+    border: 0px;
+       font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#THOUVEREZ img {
+    border-radius: 15px;
+}
+
+#THOUVEREZ  {
+  /* 1. Définit l'animation de transformation sur 1 seconde */
+  transition: transform 1s; 
+}
+
+#THOUVEREZ :hover {
+  /* 2. Applique une rotation de 360 degrés au survol */
+  transform: rotate(360deg); 
+}
+
+/* =========================================
+   STYLE PERSONNALISÉ POUR LILLIAN (LACHIZE)
+   ========================================= */
+
+/* 1. Animation des couleurs RGB + Lumière Néon */
+@keyframes rgb-glow-lillian {
+    0%   { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; } /* Rouge */
+    17%  { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; } /* Jaune */
+    33%  { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; } /* Vert */
+    50%  { border-color: #00ffff; box-shadow: 0 0 15px #00ffff; } /* Cyan */
+    67%  { border-color: #0000ff; box-shadow: 0 0 15px #0000ff; } /* Bleu */
+    83%  { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; } /* Magenta */
+    100% { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; } /* Retour Rouge */
+}
+
+/* 2. Animation de Lévitation (Flottement haut/bas) */
+@keyframes float-lillian {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); } /* Monte de 12px */
+    100% { transform: translateY(0px); }   /* Redescend */
+}
+
+/* 3. Configuration du cadre */
+#LACHIZE {
+    /* Bordure épaisse pour bien voir le RGB */
+    border-width: 4px !important;
+    border-style: solid !important;
+    background-color: white; /* Propre sur le fond */
+
+    /* Lancement des 2 animations en même temps :
+       - rgb-glow-lillian : dure 3s, linéaire, infini
+       - float-lillian : dure 4s, fluide, infini */
+    animation: 
+        rgb-glow-lillian 3s linear infinite, 
+        float-lillian 4s ease-in-out infinite;
+
+    /* Transition douce pour l'effet de zoom */
+    transition: transform 0.3s ease;
+}
+
+/* 4. Comportement au survol de la souris */
+#LACHIZE:hover {
+    /* On garde le RGB (running) mais on PAUSE la lévitation (paused) */
+    animation-play-state: running, paused;
+
+    /* On applique le ZOOM et on le maintient un peu en hauteur */
+    transform: scale(1.1) translateY(-12px);
+    
+    /* On s'assure que le cadre passe devant les autres */
+    z-index: 50; 
+    cursor: pointer;
+}
+
+/* --- FIN DU STYLE POUR LILLIAN --- */
+#JULLIAND{
+    background-color: rgba(175, 155, 155, 0.542);
+    text-align: center;
+    font-style: italic;
+}
+/* Style maximal pour l'élément #KUS */
+#KUS {
+    background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
+    background-size: 300% 300%;
+    animation: gradientShift 10s infinite;
+    border: 8px double rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.6), 
+        0 0 30px rgba(0, 212, 255, 0.6), 
+        0 0 45px rgba(123, 104, 238, 0.6), 
+        0 0 60px rgba(255, 105, 180, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Animation du dégradé de fond */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Effets au survol de #KUS */
+#KUS:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 255, 1), 
+        0 0 40px rgba(0, 212, 255, 1), 
+        0 0 60px rgba(123, 104, 238, 1), 
+        0 0 80px rgba(255, 105, 180, 1);
+}
+
+/* Texte animé au-dessus de l'élément #KUS */
+#KUS::before {
+    content: "✨ Bienvenue chez Yekzan ✨";
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(0, 255, 255, 0.8);
+    animation: textGlow 1.5s infinite alternate;
+}
+
+>>>>>>> c13a1f082d568a26f5c021cc8219627615d2baa6

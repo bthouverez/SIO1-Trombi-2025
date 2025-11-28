@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Photo Yekzan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .photo-container {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #007BFF, #00D4FF);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo-container img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container img:hover {
+            transform: rotate(5deg);
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-container">
+        <img src="photo-Yekzan.jpg" alt="Photo de Yekzan Kus">
+    </div>
+    <div class="caption">Yekzan Kus</div>
+</body>
+</html>
