@@ -1,0 +1,64 @@
+/* Carte */
+#CHAPITEAU {
+    background: linear-gradient(135deg, #87CEFA, #1E3A8A); /* Bleu clair -> bleu foncé */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* Dégradé animé */
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 4px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animation du fond dégradé */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Image avec cadre néon animé */
+#CHAPITEAU img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ffea, #0ff);
+    background-size: 400% 400%;
+    animation: neonBorder 6s linear infinite;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Animation du cadre néon */
+@keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Rotation de la photo au survol */
+#CHAPITEAU:hover img {
+    transform: rotate(10deg) scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+/* Nom/prénom en gris clair avec ombre subtile */
+#CHAPITEAU p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    transition: transform 0.8s ease, color 0.4s ease;
+}
+
+/* Rotation du texte au survol */
+#CHAPITEAU:hover p {
+    transform: rotate(360deg);
+    color: #00ffff;
+}
