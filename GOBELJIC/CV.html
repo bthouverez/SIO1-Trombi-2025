@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Sacha Gobeljic</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.cv {
+    width: 1000px;
+    background: white;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* LEFT COLUMN */
+.left {
+    width: 33%;
+    background: #1f1f1f;
+    color: white;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.left ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.left li {
+    margin: 6px 0;
+}
+
+/* RIGHT COLUMN */
+.right {
+    width: 67%;
+    padding: 40px 50px;
+}
+
+.header h1 {
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+.header h1 span {
+    font-weight: 900;
+}
+
+.header h3 {
+    margin-top: 8px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.stage {
+    margin-top: 40px;
+}
+
+.spacing {
+    letter-spacing: 4px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+hr {
+    margin: 35px 0;
+    border: none;
+    border-top: 1px solid #aaa;
+}
+
+.right-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.experience {
+    margin-bottom: 28px;
+}
+
+.experience h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.year {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.experience ul {
+    margin-left: 20px;
+}
+
+.interets {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.interets li {
+    margin: 6px 0;
+}
+
+/* CLEAN LIST STYLE */
+ul li {
+    list-style-type: disc;
+}
+.left ul li {
+    list-style-type: none;
+}
+</style>
+
+</head>
+<body>
+
+<div class="cv">
+
+    <!-- LEFT COLUMN -->
+    <aside class="left">
+        <div class="photo">
+            <img src="photo-Sacha.jpg" 
+     alt="Photo" 
+     style="width:100%; border-radius:5px;">
+
+        </div>
+
+        <h2 class="section-title">CONTACT</h2>
+        <ul class="contact">
+            <li>📞 +33 7 87 76 29 41</li>
+            <li>📧 sacha.gobeljic@gmail.com</li>
+            <li>📍 Villefranche-sur-saône</li>
+        </ul>
+
+        <h2 class="section-title">FORMATIONS</h2>
+        <div class="block">
+            <p><strong>BTS SIO (Service Informatique aux Organisations)</strong><br>
+            <em>Campus Business-School (69)</em></p><br>
+
+            <p><strong>Baccalauréat</strong><br>
+            <em>Lycée International Ferney-Voltaire (01)</em></p>
+        </div>
+
+        <h2 class="section-title">COMPÉTENCES</h2>
+        <ul class="skills">
+            <li>Configuration + utilisation VM (Windows, Linux)</li>
+            <li>Résolution incidents réseau (Wi-Fi, IP, connectivité)</li>
+            <li>Gestion droits d’accès (partages, utilisateurs)</li>
+            <li>Mise en place serveurs de base (DNS)</li>
+            <li>Pack Office365</li>
+            <li>Analyse besoins utilisateurs</li>
+            <li>Communication & résolution de problèmes</li>
+        </ul>
+
+        <h2 class="section-title">LANGAGES</h2>
+        <ul class="langues">
+            <li>Français – C2</li>
+            <li>Anglais – C1</li>
+            <li>Espagnol – B2</li>
+            <li>Serbe – C2</li>
+        </ul>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="right">
+        <div class="header">
+            <h1>SACHA<br><span>GOBELJIC</span></h1>
+            <h3>Étudiant (19 ans)</h3>
+        </div>
+
+        <div class="stage">
+            <h2 class="spacing">RECHERCHE DE<br>STAGE DU 25 MAI<br>AU 26 JUIN 2026</h2>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title right-title">EXPERIENCES</h2>
+
+        <div class="experience">
+            <h3>Capitaine et Manager Esport</h3>
+            <p class="year">2023 - Aujourd’hui</p>
+            <ul>
+                <li>Gérer et organiser une équipe</li>
+                <li>Gérer les imprévus</li>
+                <li>Créer des relations Organisation - Joueurs</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>Quent & Cam’s Déco - Cessy (France)</h3>
+            <p class="year">Été 2023</p>
+            <ul>
+                <li>Mise en pratique de traitement de façades</li>
+                <li>Rénovation sur chantier (clients particuliers)</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h3>CACEIS Switzerland Nyon (Suisse)</h3>
+            <p class="year">Été 2021</p>
+            <ul>
+                <li>Gestion hardware du service IT</li>
+                <li>Opérations dans la valorisation de fonds</li>
+                <li>Classifications de diverses archives</li>
+                <li>Réception à l’accueil</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title right-title">Centres d’intérêts</h2>
+
+        <ul class="interets">
+            <li>Sport</li>
+            <li>Informatique</li>
+            <li>Musique</li>
+            <li>Histoire</li>
+        </ul>
+
+    </main>
+</div>
+
+</body>
+</html>
