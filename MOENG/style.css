@@ -1,0 +1,439 @@
+/* === Style général - verres sans flou === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: linear-gradient(135deg, #2b2f63 0%, #5a3f8a 100%);
+  min-height: 100vh;
+  padding: 36px 20px;
+}
+
+/* === Conteneur principal (verre sans flou) === */
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.06); /* semi-transparent */
+  color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+}
+
+/* header style */
+.header {
+  padding: 34px 28px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header .subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 400;
+}
+
+/* contact */
+.contact-info {
+  padding: 14px 28px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.92);
+}
+
+/* section panels */
+.section {
+  padding: 20px 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.008));
+}
+
+.section:last-child { border-bottom: none; }
+
+.section h2 {
+  color: rgba(235,240,255,0.95);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 8px;
+}
+
+.objective p { font-size: 1.05rem; color: rgba(240,245,255,0.95); }
+
+/* jobs */
+.job { margin-bottom: 12px; }
+.job h3 { color: #fff; font-size: 1.05rem; margin-bottom: 4px; }
+.job .company { color: rgba(255,255,255,0.82); font-style: italic; margin-bottom: 8px; }
+.job ul { margin-left: 1.2rem; color: rgba(255,255,255,0.92); }
+.job ul li { margin-bottom: 6px; }
+
+/* education, skills */
+.education p, .skill-category h3 { color: #fff; }
+.skill-category h3 { margin-bottom: 8px; font-size: 1.05rem; }
+.section ul { margin-left: 1.2rem; color: rgba(255,255,255,0.92); }
+.section ul li { margin-bottom: 6px; }
+
+/* responsive tweaks */
+@media (max-width: 720px) {
+  body { padding: 20px 12px; }
+  .container { border-radius: 10px; }
+  .header h1 { font-size: 1.6rem; }
+  .section { padding: 16px; }
+  .contact-info { gap: 14px; padding: 12px 16px; }
+}
+
+/* === Photo profil - Styles complets et animations dédiées === */
+@keyframes photoGlowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4), 0 15px 40px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 0 35px rgba(102, 126, 234, 0.6), 0 15px 50px rgba(0,0,0,0.4); }
+}
+
+@keyframes cardFloatPulse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.01); }
+}
+
+@keyframes avatarSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes clickBurst {
+  0% { 
+    transform: translateY(-20px) scale(1.08) rotate(2deg);
+    filter: brightness(1.2) saturate(1.3) contrast(1.1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-30px) scale(1.15) rotate(5deg);
+    filter: brightness(1.3) saturate(1.4) contrast(1.15);
+  }
+  100% { 
+    transform: translateY(-20px) scale(1.08) rotate(2deg);
+    filter: brightness(1.1) saturate(1.15) contrast(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes cardClickBurst {
+  0% { 
+    transform: translateX(-50%) translateY(-8px) scale(1.05);
+    box-shadow: 0 30px 90px rgba(102, 126, 234, 0.4);
+  }
+  50% { 
+    transform: translateX(-50%) translateY(-12px) scale(1.12);
+    box-shadow: 0 40px 120px rgba(102, 126, 234, 0.7);
+  }
+  100% { 
+    transform: translateX(-50%) translateY(-8px) scale(1.05);
+    box-shadow: 0 30px 90px rgba(102, 126, 234, 0.4);
+  }
+}
+
+/* Image circulaire avec animations */
+img[src$="photo-William.jpg"] {
+  display: block;
+  margin: 24px auto 16px auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4), 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: all 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, filter, box-shadow;
+  animation: photoGlowPulse 3.5s ease-in-out infinite;
+}
+
+/* Carte blanche derrière l'avatar */
+img[src$="photo-William.jpg"]::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 280px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  border: 2px solid rgba(102, 126, 234, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+  z-index: 1;
+  animation: cardFloatPulse 4s ease-in-out infinite;
+  transition: all 380ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Effet hover - élévation et glow */
+img[src$="photo-William.jpg"]:hover {
+  transform: translateY(-20px) scale(1.08) rotate(2deg);
+  filter: brightness(1.1) saturate(1.15) contrast(1.05);
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.8), 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+img[src$="photo-William.jpg"]:hover::before {
+  transform: translateX(-50%) translateY(-8px) scale(1.05);
+  box-shadow: 0 30px 90px rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+}
+
+/* Focus visible pour l'accessibilité */
+img[src$="photo-William.jpg"]:focus-visible {
+  outline: 3px solid rgba(102, 126, 234, 0.6);
+  outline-offset: 8px;
+}
+
+/* Animation au clic */
+img[src$="photo-William.jpg"].clicked {
+  animation: clickBurst 600ms cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+}
+
+img[src$="photo-William.jpg"].clicked::before {
+  animation: cardClickBurst 600ms cubic-bezier(0.34, 1.56, 0.64, 1) 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  img[src$="photo-William.jpg"] {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto 12px auto;
+    border-width: 3px;
+  }
+  
+  img[src$="photo-William.jpg"]::before {
+    width: 230px;
+    height: 250px;
+    top: -35px;
+  }
+  
+  img[src$="photo-William.jpg"]:hover {
+    transform: translateY(-16px) scale(1.06) rotate(1deg);
+  }
+}
+
+@media (max-width: 520px) {
+  img[src$="photo-William.jpg"] {
+    width: 140px;
+    height: 140px;
+    margin: 16px auto 10px auto;
+    border-width: 3px;
+    animation: photoGlowPulse 4.5s ease-in-out infinite;
+  }
+  
+  img[src$="photo-William.jpg"]::before {
+    width: 200px;
+    height: 220px;
+    top: -30px;
+  }
+  
+  img[src$="photo-William.jpg"]:hover {
+    transform: translateY(-12px) scale(1.05) rotate(0.5deg);
+  }
+}
+
+/* === Interactions & Animations ajout�es === */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Staggered entrance for direct children (load animation) */
+.container > * {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 620ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+.container > *:nth-child(1)  { animation-delay: 0.08s; }
+.container > *:nth-child(2)  { animation-delay: 0.16s; }
+.container > *:nth-child(3)  { animation-delay: 0.24s; }
+.container > *:nth-child(4)  { animation-delay: 0.32s; }
+.container > *:nth-child(5)  { animation-delay: 0.40s; }
+.container > *:nth-child(6)  { animation-delay: 0.48s; }
+.container > *:nth-child(7)  { animation-delay: 0.56s; }
+.container > *:nth-child(8)  { animation-delay: 0.64s; }
+.container > *:nth-child(9)  { animation-delay: 0.72s; }
+.container > *:nth-child(10) { animation-delay: 0.80s; }
+
+/* Header animated gradient text */
+.header h1 {
+  background: linear-gradient(90deg, #ffffff 0%, #bcd8ff 30%, #ffd6e0 60%, #ffffff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 6s linear infinite;
+  display: inline-block;
+  transition: transform 300ms ease;
+}
+.header:hover h1 {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Gentle floating accent for subtitle */
+.header .subtitle {
+  display: inline-block;
+  animation: floaty 4.5s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+/* Job hover elevation & focus for keyboard users */
+.job {
+  transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease, background-color 260ms ease;
+  will-change: transform, box-shadow;
+}
+.job:hover, .job:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* Skill items: hover-to-expand progress bar via pseudo-element */
+.skill-category ul li {
+  position: relative;
+  padding: 8px 8px 14px 8px;
+  border-radius: 6px;
+  transition: background-color 240ms ease;
+  overflow: visible;
+}
+.skill-category ul li::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 6px;
+  height: 6px;
+  width: 0%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(139,233,253,0.95), rgba(127,90,240,0.95));
+  transition: width 520ms cubic-bezier(.2,.9,.2,1);
+  z-index: 0;
+}
+.skill-category ul li:hover::after,
+.skill-category ul li:focus-within::after {
+  width: 100%;
+}
+.skill-category ul li:hover { background: rgba(255,255,255,0.02); }
+
+/* Make list content sit above pseudo bars */
+.skill-category ul li * { position: relative; z-index: 1; }
+
+/* Subtle interactive contact items */
+.contact-info p {
+  transition: transform 220ms ease, color 220ms ease;
+}
+.contact-info p:hover, .contact-info p:focus {
+  transform: translateY(-4px);
+  color: #eaf6ff;
+}
+
+/* Accessibility: respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+  .container > * { opacity: 1; transform: none; }
+}
+
+/* Responsive: reduce motion on small screens and keep animations subtle */
+@media (max-width: 520px) {
+  .header h1 { animation-duration: 10s; }
+  .container > * { animation-duration: 420ms; }
+  .skill-category ul li::after { height: 5px; }
+}
+
+/* small utility: focus outline visible */
+.job:focus-within, .contact-info p:focus {
+  outline: 3px solid rgba(124, 58, 237, 0.18);
+  outline-offset: 4px;
+}
+
+/* End of interactions block */
+
+/* === Download Button Styles === */
+.download-cv-btn {
+  display: block;
+  margin: 20px auto 24px auto;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 320ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  will-change: transform, box-shadow, background;
+  backdrop-filter: blur(10px);
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 1), rgba(118, 75, 162, 1));
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.download-cv-btn:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.download-cv-btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+}
+
+/* Animation d'apparition du bouton */
+.download-cv-btn {
+  animation: fadeInUp 620ms cubic-bezier(.2,.9,.2,1) forwards 0.24s;
+  opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .download-cv-btn {
+    margin: 16px auto 20px auto;
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-cv-btn {
+    animation: none;
+    opacity: 1;
+    transition: none;
+  }
+}
