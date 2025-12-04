@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mathias Beroud</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">🔥</text></svg>'), auto !important;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            padding: 40px 20px;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(26, 26, 26, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 30px 80px rgba(255, 107, 0, 0.5);
+            overflow: hidden;
+            border: 2px solid rgba(255, 107, 0, 0.3);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .container::before {
+            content: '💋';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3em;
+            opacity: 0.1;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .header {
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.2) 0%, rgba(255, 0, 100, 0.2) 100%);
+            color: white;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 3px solid #ff6b00;
+            transition: all 0.5s ease;
+        }
+
+        .header:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.4) 0%, rgba(255, 0, 100, 0.4) 100%);
+            transform: scale(1.02);
+        }
+
+        .header::before {
+            content: '🔥';
+            position: absolute;
+            font-size: 10em;
+            top: -50px;
+            right: -50px;
+            opacity: 0.1;
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #ff6b00, #ff0064, #ff6b00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 3s ease infinite;
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .header .subtitle {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            color: #ff8c00;
+            font-style: italic;
+        }
+
+        .header .subtitle::after {
+            content: ' 🌶️';
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 1em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background: rgba(255, 107, 0, 0.1);
+        }
+
+        .contact-item:hover {
+            color: #ff6b00;
+            transform: scale(1.1) rotate(-2deg);
+            background: rgba(255, 107, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.5);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, rgba(26, 0, 0, 0.8) 0%, rgba(51, 0, 0, 0.8) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-right: 2px solid rgba(255, 107, 0, 0.3);
+        }
+
+        .sidebar h2 {
+            color: #ff6b00;
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 2px solid #ff6b00;
+            padding-bottom: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar h2:hover {
+            color: #ff0064;
+            transform: translateX(10px);
+            text-shadow: 0 0 20px #ff6b00;
+        }
+
+        .sidebar h2::before {
+            content: '🔥';
+            margin-right: 10px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-section:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+        }
+
+        .sidebar-section li {
+            margin-bottom: 15px;
+            padding: 10px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .sidebar-section li:hover {
+            color: #ff8c00;
+            transform: translateX(15px) scale(1.1);
+            background: rgba(255, 107, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+        }
+
+        .sidebar-section li::before {
+            content: '💋';
+            position: absolute;
+            left: 0px;
+            font-size: 1.2em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .content {
+            padding: 40px;
+            background: rgba(26, 26, 26, 0.8);
+        }
+
+        .content h2 {
+            color: #ff6b00;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-left: 5px solid #ff6b00;
+            padding-left: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .content h2:hover {
+            color: #ff0064;
+            transform: translateX(10px) scale(1.05);
+            text-shadow: 0 0 30px #ff6b00;
+        }
+
+        .content h2::after {
+            content: '❤️‍🔥';
+            margin-left: 15px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+        }
+
+        .section {
+            margin-bottom: 45px;
+        }
+
+        .experience-item, .formation-item {
+            margin-bottom: 30px;
+            padding: 30px;
+            padding-left: 35px;
+            border-left: 4px solid #ff6b00;
+            background: rgba(255, 107, 0, 0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .experience-item::before, .formation-item::before {
+            content: '🌹';
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 3em;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .experience-item:hover, .formation-item:hover {
+            transform: translateX(15px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 0, 0.5);
+            background: rgba(255, 107, 0, 0.15);
+            border-left-color: #ff0064;
+        }
+
+        .experience-item:hover::before, .formation-item:hover::before {
+            opacity: 0.3;
+            transform: rotate(360deg) scale(1.5);
+        }
+
+        .experience-item h3, .formation-item h3 {
+            color: #ff6b00;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover h3, .formation-item:hover h3 {
+            color: #ff0064;
+            transform: translateX(10px);
+        }
+
+        .experience-item .company, .formation-item .school {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .experience-item .date, .formation-item .date {
+            color: #ff8c00;
+            font-size: 1em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .experience-item li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item li:hover {
+            color: #ff8c00;
+            transform: translateX(10px);
+        }
+
+        .experience-item li::before {
+            content: '🔥';
+            position: absolute;
+            left: 0;
+            font-size: 1em;
+        }
+
+        .objective {
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, rgba(255, 0, 100, 0.3) 100%);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 3px solid #ff6b00;
+            box-shadow: 0 15px 40px rgba(255, 107, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .objective:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(255, 107, 0, 0.6);
+            border-color: #ff0064;
+        }
+
+        .objective::before {
+            content: '💕';
+            position: absolute;
+            font-size: 8em;
+            top: -30px;
+            right: -30px;
+            opacity: 0.1;
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .objective p {
+            color: white;
+            line-height: 2;
+            font-size: 1.15em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .objective strong {
+            color: #ff6b00;
+            font-size: 1.2em;
+            text-shadow: 0 0 10px #ff6b00;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .floating-emoji {
+            position: fixed;
+            font-size: 5em;
+            pointer-events: none;
+            z-index: 9999;
+            animation: floatUp 3s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-200px) rotate(360deg) scale(0);
+            }
+        }
+
+        .age-verification {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a0000 0%, #330000 50%, #1a0000 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+        }
+
+        .age-box {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 60px 80px;
+            border-radius: 30px;
+            border: 3px solid #ff6b00;
+            box-shadow: 0 30px 80px rgba(255, 107, 0, 0.6);
+            text-align: center;
+            animation: fadeIn 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .age-box::before {
+            content: '🔥';
+            position: absolute;
+            font-size: 15em;
+            top: -80px;
+            right: -80px;
+            opacity: 0.05;
+            animation: spin 20s linear infinite;
+        }
+
+        .age-emoji {
+            font-size: 6em;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .age-box h1 {
+            color: #ff6b00;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #ff6b00, #ff0064);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .age-question {
+            color: #ff8c00 !important;
+            font-size: 1.8em !important;
+            font-weight: bold;
+            margin: 30px 0 !important;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .age-buttons button {
+            padding: 20px 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer !important;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff6b00, #ff0064);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.5);
+        }
+
+        .btn-yes:hover {
+            transform: scale(1.15) rotate(-2deg);
+            box-shadow: 0 15px 50px rgba(255, 107, 0, 0.8);
+        }
+
+        .btn-no {
+            background: linear-gradient(135deg, #555, #333);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-no:hover {
+            transform: scale(1.15) rotate(2deg);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-yes::before, .btn-no::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .btn-yes:hover::before, .btn-no:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; transform: scale(1); }
+            to { opacity: 0; transform: scale(0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="age-verification" id="ageVerification">
+        <div class="age-box">
+            <div class="age-emoji">🔞</div>
+            <h1>Vérification d'âge</h1>
+            <p class="age-question">Avez-vous plus de 18 ans ?</p>
+            <div class="age-buttons">
+                <button class="btn-yes" onclick="enterSite()">OUI 🔥</button>
+                <button class="btn-no" onclick="rejectAccess()">NON 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display: none;">
+        <div class="header">
+            <h1>Mathias Beroud</h1>
+            <div class="subtitle">Recherche stage en réseaux</div>
+            <div class="contact-info">
+                <div class="contact-item">+33 6 65 13 18 08</div>
+                <div class="contact-item">mathias.beroud@outlook.com</div>
+                <div class="contact-item">Fareins</div>
+                <div class="contact-item">Permis B1</div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h2>Langues</h2>
+                    <ul>
+                        <li>Anglais : B1</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2>Compétences</h2>
+                    <ul>
+                        <li>Relation client</li>
+                        <li>Informatique interne</li>
+                        <li>Réseaux</li>
+                        <li>GLPI</li>
+                        <li>Codage</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h2>Centres d'intérêt</h2>
+                    <ul>
+                        <li>Tir à l'arc (5 ans de pratique)</li>
+                        <li>Membre du bureau du club</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="objective">
+                    <p><strong>Objectif :</strong> Recherche un stage en réseaux du 25 mai au 26 juin 2026 dans le cadre de ma formation BTS SIO.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Formation</h2>
+                    <div class="formation-item">
+                        <h3>BTS SIO</h3>
+                        <div class="school">Business School Limas</div>
+                        <div class="date">2025 - en cours</div>
+                    </div>
+                    <div class="formation-item">
+                        <h3>Bac professionnel systèmes numériques</h3>
+                        <div class="school">Lycée professionnel Louis Armand</div>
+                        <div class="date">2022 - 2025</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Expérience professionnelle</h2>
+                    <div class="experience-item">
+                        <h3>Technicien informatique</h3>
+                        <div class="company">Isinet, Belleville-en-Beaujolais</div>
+                        <div class="date">Novembre 2024 - Décembre 2024</div>
+                        <ul>
+                            <li>Assistance à domicile</li>
+                            <li>Support et réparation informatique</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Développeur stagiaire</h3>
+                        <div class="company">Amiltone, Villeurbanne</div>
+                        <div class="date">Juin 2024 - Juillet 2024</div>
+                        <ul>
+                            <li>Rédaction des rapports de progression</li>
+                            <li>Participation aux réunions de suivi de projet</li>
+                            <li>Développement dans le cadre du projet</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Manutentionnaire</h3>
+                        <div class="company">Start People</div>
+                        <div class="date">Avril 2025</div>
+                        <ul>
+                            <li>Vendanges et manutention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enterSite() {
+            const verification = document.getElementById('ageVerification');
+            const mainContent = document.getElementById('mainContent');
+            
+            verification.style.animation = 'fadeOut 0.5s ease';
+            setTimeout(() => {
+                verification.style.display = 'none';
+                mainContent.style.display = 'block';
+                mainContent.style.animation = 'fadeIn 1s ease';
+                startEmojiAnimation();
+            }, 500);
+        }
+
+        function rejectAccess() {
+            alert('Désolé, vous devez avoir plus de 18 ans pour accéder à ce CV ! 😢');
+        }
+
+        function startEmojiAnimation() {
+            const emojis = ['💋', '🔥', '🌹', '🍑', '🌶️', '💘', '❤️‍🔥', '💕', '😏', '🔞'];
+            
+            function createFloatingEmoji() {
+                const emoji = document.createElement('div');
+                emoji.className = 'floating-emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = Math.random() * window.innerWidth + 'px';
+                emoji.style.top = window.innerHeight - 100 + 'px';
+                document.body.appendChild(emoji);
+                
+                setTimeout(() => {
+                    emoji.remove();
+                }, 3000);
+            }
+            
+            setInterval(createFloatingEmoji, 2000);
+        }
+    </script>
+</body>
+</html>

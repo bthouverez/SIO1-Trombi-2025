@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+
+<style>
+    :root{
+        --title-color:#0b132b;  /* bleu nuit très lisible */
+        --title-hover:#ff6b00;  /* orange contrasté */
+        --text-color:#1f2430;
+        --bg1:#f7fbff; --bg2:#eef7ff; --bg3:#f7fbff;
+    }
+    body{
+        font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        background: linear-gradient(270deg, var(--bg1), var(--bg2), var(--bg3));
+        background-size: 600% 600%;
+        animation: gradientAnimation 18s ease infinite;
+        color: var(--text-color);
+        padding: 24px;
+        line-height: 1.6;
+    }
+    @keyframes gradientAnimation{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    h1,h2,h3{
+        color: var(--title-color);
+        text-shadow: 0 1px 0 #fff, 0 2px 4px rgba(0,0,0,.08);
+        transition: color .25s ease, transform .15s ease;
+    }
+    h1:hover,h2:hover,h3:hover{color: var(--title-hover); transform: translateY(-1px);}    
+    .tag{display:inline-block; padding:.2rem .5rem; border-radius:999px; background:#e9f3ff; color:#0b4f9c; font-size:.8rem; margin-left:.4rem}
+    ul{list-style:none; padding-left:0}
+    ul li{position:relative; padding-left:1.6rem; margin:.35rem 0}
+    
+    .section{margin-top:1.2rem}
+    .pill{display:inline-flex; align-items:center; gap:.35rem; background:#fff; border:1px solid #e6ecf5; border-radius:10px; padding:.35rem .6rem; font-size:.9rem}
+</style>
+<style>
+    h3 { margin-top: 0.8rem; margin-bottom: 0.4rem; }
+    .section { margin-top: 0.8rem; }
+</style>
+
+
+
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>CV YEBOAH MICHAEL</title>
+<style>
+body {font-family: 'Roboto', Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333;}
+header {background:#1f3c88; color:#fff; text-align:center; padding:40px 20px; animation:slideDown 1.5s ease-out;}
+header h1 {font-size:2.5em; margin:0;}
+header p {font-size:1.2em; margin-top:10px;}
+.container {max-width:1000px; margin:30px auto; background:#fff; padding:30px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); animation:fadeInUp 1.5s ease;}
+.section {margin-bottom:30px; opacity:0; transform:translateY(50px); animation:reveal 1s forwards;}
+.section:nth-child(1){animation-delay:0.5s;}
+.section:nth-child(2){animation-delay:1s;}
+.section:nth-child(3){animation-delay:1.5s;}
+.section:nth-child(4){animation-delay:2s;}
+.section:nth-child(5){animation-delay:2.5s;}
+h2 {color:#1f3c88; border-bottom:2px solid #ddd; padding-bottom:8px; margin-bottom:15px;}
+ul {list-style:none; padding:0;}
+li {margin-bottom:8px; transition:transform 0.3s;}
+li:hover {transform:scale(1.05);}
+.download-btn {display:inline-flex; align-items:center; gap:8px; padding:10px 20px; background:#1f3c88; color:#fff; font-weight:bold; text-decoration:none; border-radius:5px; transition:background-color .3s ease; animation:pulse 1.5s infinite;}
+.download-btn:hover {background:#16306d;}
+.download-btn svg {width:18px; height:18px; fill:currentColor;}
+.reseaux {background:#e8f0fe; border-left:5px solid #1f3c88; padding:20px; animation:highlight 2s infinite alternate;}
+@keyframes slideDown {from{transform:translateY(-100px); opacity:0;} to{transform:translateY(0); opacity:1;}}
+@keyframes fadeInUp {from{transform:translateY(50px); opacity:0;} to{transform:translateY(0); opacity:1;}}
+@keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);}}
+@keyframes highlight {0%{background:#e8f0fe;}100%{background:#dbeafe;}}
+@keyframes reveal {to{opacity:1; transform:translateY(0);}}
+</style>
+</head>
+<body>
+<header>
+<h1>YEBOAH MICHAEL</h1>
+<p>💻 Développeur Informatique | 🔗 Spécialiste Réseaux</p>
+<a href='CV%20%C3%A9tude%20de%20Yeboah%20Michael.pdf' class='download-btn' download>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5 20h14v-2H5v2zm7-18l-7 7h4v6h6v-6h4l-7-7z'/></svg>
+Télécharger le CV en PDF
+</a>
+</header>
+<div class='container'>
+<div class='section'><h2>Profil</h2><p>Développeur informatique orienté réseaux, actuellement en BTS SIO (Services Informatiques aux Organisations). Passionné par la gestion et la sécurisation des réseaux, avec des compétences en configuration, 🛠️ diagnostic et assistance technique.</p></div>
+<div class='section'><h2>Compétences</h2><ul><li>🗂️ Capacités d’organisation</li><li>🖥️ 🖥️ Gestion de serveurs Windows et Linux</li><li>Configuration de routeurs, VLAN et pare-feu</li><li>Création de machines virtuelles (VMware, VirtualBox)</li><li>🔐 Mise en place de sauvegardes et protections réseau</li><li>🗃️ Installation et gestion de MySQL</li><li>🛠️ Diagnostic et assistance technique</li></ul></div>
+<div class='section'><h2>Expérience</h2><ul><li>🧪 Stage à l’IUT de Lyon 🇫🇷 : gestion du réseau, configuration d’ordinateurs, mise en place d’un réseau local sécurisé, intervention en cas de piratage</li><li>Chantier jeunes – Gratte-Ciel : gestion du temps, travail en groupe, gestion du stress</li><li>⚽ Coach à l’Éveil de Lyon (club de football) 🇫🇷 : encadrement et animation de groupes, développement de compétences pédagogiques et organisationnelles</li><li>📦 Agent d’inventaire chez RGIS : comptage et vérification des stocks, rigueur et travail en équipe</li></ul></div>
+<div class='section'><h2>Formation</h2><ul><li>BTS SIO (Services Informatiques aux Organisations) – Business School by CSND (2025 – 2026)</li><li>Baccalauréat général, spécialités NSI et SES – Lycée Pierre Brossolette (2022 – 2025)</li></ul></div>
+<div class='section reseaux'><h2>Réseaux</h2><p>🖥️ Gestion de serveurs, 📡 configuration de routeurs et VLAN, 🔒 mise en place de réseaux sécurisés, 🛠️ diagnostic et assistance technique.</p></div>
+</div>
+</body>
+</html>

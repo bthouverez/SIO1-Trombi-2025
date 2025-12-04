@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Méril CEBRON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+        }
+        
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            flex-shrink: 0;
+        }
+        
+        .main-content {
+            padding: 40px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 30px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2a5298;
+            color: #1e3c72;
+        }
+        
+        .sidebar .section-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+        
+        .contact-item {
+            margin-bottom: 15px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .profile-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: #f0f4f8;
+            padding: 15px;
+            border-left: 4px solid #2a5298;
+            margin: 20px 0;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .exp-title {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 14px;
+        }
+        
+        .exp-date {
+            color: #666;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .exp-company {
+            color: #2a5298;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+        
+        .exp-tasks {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .exp-tasks li {
+            padding-left: 20px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #444;
+            position: relative;
+        }
+        
+        .exp-tasks li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        .formation-item {
+            margin-bottom: 15px;
+        }
+        
+        .formation-year {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 13px;
+        }
+        
+        .formation-desc {
+            color: #444;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-item {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .competence-item {
+            margin-bottom: 10px;
+            font-size: 13px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .competence-item:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .certification-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="header-section">
+                <img src="photo-Meril.jpg" alt="Photo de Méril CEBRON" class="profile-photo">
+                <div class="name">Méril<br>CEBRON</div>
+            </div>
+            
+            <div class="section-title">CONTACT</div>
+            <div class="contact-item">Belleville-en-Beaujolais 69220</div>
+            <div class="contact-item">cebronmeril@gmail.com</div>
+            <div class="contact-item">06 37 33 21 89</div>
+            <div class="contact-item">Permis B</div>
+            
+            <div class="section-title">PROFIL</div>
+            <div class="profile-box">
+                Actuellement étudiant en BTS SIO, je suis à la recherche d'un stage de 5 semaines pour compléter ma 1ère année
+            </div>
+            
+            <div class="highlight-box" style="background: rgba(255,255,255,0.15); border-left-color: white; margin-top: 20px;">
+                <strong>À la recherche d'un stage en développement de 5 semaines à partir du 25 mai 2026.</strong><br>
+                Villefranche et alentours.
+            </div>
+            
+            <div class="section-title">LANGUES</div>
+            <div class="lang-item">
+                <span>Anglais :</span>
+                <span>B2</span>
+            </div>
+            <div class="lang-item">
+                <span>Espagnol :</span>
+                <span>B1</span>
+            </div>
+            
+            <div class="section-title">PROGRAMMATION</div>
+            <div class="skills-grid">
+                <div class="skill-item">C</div>
+                <div class="skill-item">C++</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">HTML</div>
+            </div>
+            
+            <div class="section-title">CERTIFICATIONS</div>
+            <div class="certification-item">
+                MooC de CLUB EBIOS<br>
+                ANSSI x CLUB EBIOS
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="section-title">FORMATION</div>
+            <div class="formation-item">
+                <div class="formation-year">2025 :</div>
+                <div class="formation-desc">BTS Systèmes Informatiques aux Organisations</div>
+            </div>
+            <div class="formation-item">
+                <div class="formation-year">2024 :</div>
+                <div class="formation-desc">Bac technologique Sciences et Technologies du Management et de la Gestion avec mention bien</div>
+            </div>
+            
+            <div class="section-title">EXPÉRIENCES</div>
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">OUVRIER AGROALIMENTAIRE</div>
+                    <div class="exp-date">2023 : 4 SEMAINES</div>
+                </div>
+                <div class="exp-company">Corico</div>
+                <ul class="exp-tasks">
+                    <li>expédition des commandes</li>
+                    <li>formation à la sécurité et au cadre hygiénique</li>
+                    <li>livraison</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div class="exp-title">AGENT D'ENTRETIEN DE LA COMMUNE</div>
+                    <div class="exp-date">06/25 - 08/25</div>
+                </div>
+                <div class="exp-company">Mairie de Belleville</div>
+                <ul class="exp-tasks">
+                    <li>entretien des espaces verts</li>
+                    <li>entretien des sanitaires</li>
+                    <li>aménagement des écoles</li>
+                </ul>
+            </div>
+            
+            <div class="section-title">COMPÉTENCES</div>
+            <div class="competence-item">Utilisation de machines virtuelles</div>
+            <div class="competence-item">Connaissances en matière de matériel et logiciel informatique</div>
+            <div class="competence-item">Gestion simple des droits d'accès</div>
+        </div>
+    </div>
+</body>
+</html>
