@@ -1,0 +1,279 @@
+/* ===============================
+   Thème Genshin Impact simplifié
+   pour le CV de Nassim
+   =============================== */
+
+/* Palette principale */
+:root {
+  --bg-dark: #0b1024;
+  --bg-panel: #151b35;
+  --gold: #f4d03f;
+  --gold-soft: #d4af37;
+  --blue: #3b82f6;
+  --text-main: #f9fafb;
+  --text-soft: #cbd5f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 15% 20%, rgba(244,208,63,0.12), transparent 55%),
+              radial-gradient(circle at 85% 80%, rgba(59,130,246,0.18), transparent 55%),
+              linear-gradient(135deg, #050814, #0b1024 45%, #111827 100%);
+  min-height: 100vh;
+  padding: 32px 16px;
+  color: var(--text-main);
+}
+
+main.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: radial-gradient(circle at top, rgba(244,208,63,0.12), transparent 60%),
+              linear-gradient(145deg, rgba(15,23,42,0.96), rgba(17,24,39,0.96));
+  border-radius: 20px;
+  padding: 40px 28px 32px;
+  border: 1px solid rgba(244,208,63,0.4);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.7);
+}
+
+/* Titre principal */
+h1.title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: linear-gradient(120deg, #fef9c3, var(--gold), var(--blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 25px rgba(244,208,63,0.5);
+  margin-bottom: 32px;
+}
+
+/* Carte portrait façon bannière */
+.student-card {
+  text-align: center;
+  padding: 28px 20px 24px;
+  border-radius: 18px;
+  background: radial-gradient(circle at top, rgba(244,208,63,0.2), transparent 60%),
+              linear-gradient(135deg, #111827, #020617);
+  border: 1px solid rgba(244,208,63,0.65);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.8);
+  margin-bottom: 32px;
+}
+
+.student-card img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 18px;
+  border: 4px solid var(--gold-soft);
+  box-shadow: 0 0 35px rgba(244,208,63,0.55);
+}
+
+.student-card h2 {
+  font-size: 1.9rem;
+  margin-bottom: 4px;
+  color: var(--text-main);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  margin-bottom: 14px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(244,208,63,0.7);
+  background: linear-gradient(120deg, #fef9c3, var(--gold));
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.98rem;
+  box-shadow: 0 10px 26px rgba(244,208,63,0.55);
+}
+
+/* Sections (coordonnées, formation, etc.) */
+.cv-section {
+  margin-bottom: 24px;
+  padding: 22px 18px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(15,23,42,0.85));
+  border: 1px solid rgba(148,163,184,0.5);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(75,85,99,0.7);
+  padding-bottom: 6px;
+}
+
+/* Grille coordonnés */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.info-item {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(15,23,42,0.85);
+  border: 1px solid rgba(55,65,81,0.9);
+}
+
+.info-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+}
+
+.info-value {
+  font-size: 0.98rem;
+  color: var(--text-main);
+}
+
+/* Timeline simple (formation + expériences) */
+.timeline {
+  border-left: 2px solid rgba(75,85,99,0.9);
+  margin-left: 10px;
+  padding-left: 14px;
+}
+
+.timeline-item {
+  margin-bottom: 16px;
+}
+
+.timeline-year {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 2px;
+}
+
+.timeline-content h4 {
+  font-size: 1.02rem;
+  color: var(--text-main);
+}
+
+.timeline-location {
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin: 2px 0 4px;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+/* Compétences : tags */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.skill-category h4 {
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(148,163,184,0.8);
+  background: rgba(15,23,42,0.9);
+  color: var(--text-soft);
+}
+
+/* Langues */
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.language-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-name {
+  font-weight: 600;
+}
+
+.language-level {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.level-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(148,163,184,0.9);
+}
+
+.level-dot.filled {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.level-text {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+/* Centres d'intérêt */
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.interest-item {
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.9);
+  border: 1px solid rgba(75,85,99,0.9);
+  font-size: 0.9rem;
+}
+
+/* Carte dans le trombinoscope (index) */
+#RAHALI {
+  border-radius: 14px;
+  background: rgba(59,130,246,0.12);
+  box-shadow: 0 6px 16px rgba(37,99,235,0.4);
+}
+
+#RAHALI img {
+  border-radius: 999px;
+  border: 3px solid rgba(59,130,246,0.8);
+}
+
+#RAHALI p {
+  font-weight: 700;
+}

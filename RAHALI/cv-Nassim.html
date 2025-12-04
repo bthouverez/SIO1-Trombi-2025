@@ -4,18 +4,183 @@
   <meta charset="utf-8">
   <title>CV - Nassim Rahali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:20px}
-    .pdf-wrap{max-width:900px;margin:0 auto}
-    .photo{display:block;margin:0 auto 15px auto;width:150px;border-radius:50%}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>CV — Nassim Rahali</h1>
-  <img src="photo-Nassim.jpg" alt="Photo de Nassim" class="photo">
-  <div class="pdf-wrap">
-    <embed src="cv-nassim.pdf" type="application/pdf" width="100%" height="800px" />
-    <p>Si le PDF ne s'affiche pas, <a href="cv-nassim.pdf" download>Télécharger le CV</a></p>
-  </div>
+  <main class="content">
+    <h1 class="title">CV — Nassim Rahali</h1>
+
+    <!-- Carte de présentation -->
+    <div class="student-card">
+      <img src="photo-Nassim.jpg" alt="Photo de Nassim">
+      <h2>Nassim Rahali</h2>
+      <p class="subtitle">Étudiant en SIO - Spécialité SISR</p>
+      <a href="cv-nassim.pdf" download class="download-btn">📥 Télécharger mon CV en PDF</a>
+    </div>
+
+    <!-- Section Coordonnées -->
+    <section class="cv-section">
+      <h3 class="section-title">📍 Coordonnées</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-label">Email :</span>
+          <span class="info-value">nassimrahali2018@gmail.com</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Téléphone :</span>
+          <span class="info-value">+33 07 44 90 77 42 </span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Localisation :</span>
+          <span class="info-value">France, Villefranche-sur-Saône</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section class="cv-section">
+      <h3 class="section-title">🎓 Formation</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2025 - 2027</div>
+          <div class="timeline-content">
+            <h4>BTS Services Informatiques aux Organisations (SIO)</h4>
+            <p class="timeline-location">Business School - Spécialité SISR</p>
+            <p>Formation en solutions d'infrastructure, systèmes et réseaux</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2023 - 2025</div>
+          <div class="timeline-content">
+            <h4>Baccalauréat STMG</h4>
+            <p class="timeline-location">Lycée Claude Bernard, Villefranche-sur-Saône</p>
+            <p>Diplôme obtenu</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section class="cv-section">
+      <h3 class="section-title">⚡ Compétences</h3>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Compétences professionnelles</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Capacité d'adaptation</span>
+            <span class="skill-tag">Accueil et service client</span>
+            <span class="skill-tag">Gestion de caisse et encaissement</span>
+            <span class="skill-tag">Respect des règles d'hygiène et de sécurité</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Compétences techniques</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Suite Office</span>
+            <span class="skill-tag">Kali Linux</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h4>Gestion et organisation</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Mise en rayon, réassort et inventaire</span>
+            <span class="skill-tag">Organisation et mise en rayon</span>
+            <span class="skill-tag">Gestion des stocks</span>
+            <span class="skill-tag">Accueil et conseil client</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Expérience -->
+    <section class="cv-section">
+      <h3 class="section-title">💼 Expérience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">—</div>
+          <div class="timeline-content">
+            <h4>Équipier polyvalent</h4>
+            <p class="timeline-location">McDonald’s – Villefranche-sur-Saône</p>
+            <p>Maintien de la propreté des zones de travail et des espaces de vente.</p>
+            <p>Participation active à la réception des livraisons, mise en rayon des produits et réassort des stocks.</p>
+            <p>Gestion de la caisse et accueil des clients.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h4>Employé intérimaire</h4>
+            <p class="timeline-location">Décathlon – du 30 juin au 6 juillet 2025 (1 semaine)</p>
+            <p>Accueil des clients et conseil sur les produits adaptés à leurs besoins.</p>
+            <p>Mise en rayon et organisation des produits selon les standards de l’enseigne.</p>
+            <p>Collaboration avec l’équipe pour assurer la propreté et la sécurité du point de vente.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">
+            <h4>Inventoriste intérimaire</h4>
+            <p class="timeline-location">Leclerc – Proman, vacances de printemps 2025 (1 semaine)</p>
+            <p>Réalisation précise des inventaires de stocks pour assurer la fiabilité des données.</p>
+            <p>Coordination avec les équipes magasin pour minimiser l’impact sur la vente durant l’inventaire.</p>
+            <p>Application rigoureuse des procédures de contrôle et de vérification des produits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Langues -->
+    <section class="cv-section">
+      <h3 class="section-title">🌍 Langues</h3>
+      <div class="languages">
+        <div class="language-item">
+          <span class="language-name">Français</span>
+          <div class="language-level">
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-text">Natif</span>
+          </div>
+        </div>
+        <div class="language-item">
+          <span class="language-name">Anglais</span>
+          <div class="language-level">
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot"></span>
+            <span class="level-text">Intermédiaire</span>
+          </div>
+        </div>
+        <div class="language-item">
+          <span class="language-name">Arabe</span>
+          <div class="language-level">
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-dot filled"></span>
+            <span class="level-text">Courant</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Centres d'intérêt -->
+    <section class="cv-section">
+      <h3 class="section-title">🎮 Centres d'intérêt</h3>
+      <div class="interests">
+        <div class="interest-item">🎮 Jeux vidéo</div>
+        <div class="interest-item">🌐 Réseau</div>
+        <div class="interest-item">📚 Lecture</div>
+        <div class="interest-item">🏃 Sport</div>
+        <div class="interest-item">🎵 Musique</div>
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>

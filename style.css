@@ -1,325 +1,360 @@
-<<<<<<< HEAD
-#MOENG {
-    background: linear-gradient(135deg, rgba(255, 87, 34, 0.3), rgba(255, 152, 0, 0.3), rgba(255, 193, 7, 0.3));
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 8px 32px rgba(255, 87, 34, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
-    display: inline-block;
-    text-align: center;
-}
-
-#MOENG:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, rgba(255, 87, 34, 0.5), rgba(255, 152, 0, 0.5), rgba(255, 193, 7, 0.5));
-}
-
-#MOENG img {
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    transition: transform 0.6s ease;
-}
-
-#MOENG:hover img {
-    transform: scale(1.1) rotate(5deg);
-}
-
-#MOENG p {
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-    text-shadow: 0 2px 8px rgba(255, 87, 34, 0.6);
-}
-
-#AGDIK
-
-{
-	background-color: #B539A7;
-	border-radius: inherit;
-    background: conic-gradient(
-        red,
-        orange,
-        yellow,
-        lime,
-        cyan,
-        blue,
-        magenta,
-        red
-);
-	display: inline-block;
-  animation: rotate 3s linear ;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-
-}
-/* Carte */
-#CHAPITEAU {
-    background: linear-gradient(135deg, #87CEFA, #1E3A8A); /* Bleu clair -> bleu foncé */
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite; /* Dégradé animé */
-    border-radius: 20px;
-    padding: 20px;
-    display: inline-block;
-    border: 4px solid transparent;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Animation du fond dégradé */
-#EGEA {
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-  border: 3px solid;
-  border-image: linear-gradient(135deg, #1976d2, #42a5f5, #64b5f6, #2196f3) 1;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-#EGEA::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #0d47a1, #1976d2, #42a5f5, #64b5f6, #90caf9);
-  background-size: 300% 300%;
-  border-radius: 12px;
-  z-index: -1;
-  animation: gradient-border 4s ease infinite;
-}
-
-#EGEA:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
-}
-
-#EGEA img {
-  transition: all 0.4s ease;
-  border-radius: 8px;
-}
-
-#EGEA:hover img {
-  transform: scale(1.08) rotate(2deg);
-  filter: brightness(1.1);
-}
-
-#EGEA p {
-  color: #0d47a1;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-@keyframes gradient-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
+/* ========== THOUVEREZ ========== */
 #THOUVEREZ {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
-    background: #21BF33;
-        background: linear-gradient(299deg,rgba(33, 191, 51, 1) 0%, rgba(243, 255, 13, 1) 40%, rgba(255, 13, 13, 1) 100%, rgba(237, 83, 83, 1) 100%);
+    background: linear-gradient(299deg, rgba(33, 191, 51, 1) 0%, rgba(243, 255, 13, 1) 40%, rgba(255, 13, 13, 1) 100%, rgba(237, 83, 83, 1) 100%);
     border-radius: 15px;
-    border: 0px;
-       font-family: "Gochi Hand", cursive;
-  font-weight: 400;
-  font-style: normal;
+    border: 0;
+    font-family: "Gochi Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    transition: transform 1s;
 }
 
 #THOUVEREZ img {
     border-radius: 15px;
 }
 
-#THOUVEREZ  {
-  /* 1. Définit l'animation de transformation sur 1 seconde */
-  transition: transform 1s; 
-}
-
-#THOUVEREZ :hover {
-  /* 2. Applique une rotation de 360 degrés au survol */
-  transform: rotate(360deg); 
-}
-
-/* =========================================
-   STYLE PERSONNALISÉ "ULTIMATE RGB" POUR LILLIAN
-   ========================================= */
-
-/* 0. Importation de la police futuriste "Orbitron" depuis Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
-/* 1. Animation des couleurs RGB (Bordure + Ombre) */
-@keyframes rgb-glow-lillian {
-    0%   { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
-    17%  { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; }
-    33%  { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
-    50%  { border-color: #00ffff; box-shadow: 0 0 15px #00ffff; }
-    67%  { border-color: #0000ff; box-shadow: 0 0 15px #0000ff; }
-    83%  { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
-    100% { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
-}
-
-/* 2. Animation de Lévitation (Flottement) */
-@keyframes float-lillian {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-12px); }
-    100% { transform: translateY(0px); }
-}
-
-/* 3. Animation du FOND (Background) Liquide */
-@keyframes rainbow-bg {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-#KUS {
-    background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
-    background-size: 300% 300%;
-    animation: gradientShift 10s infinite;
-    border: 8px double rgba(255, 255, 255, 0.8);
-    box-shadow: 
-        0 0 15px rgba(0, 255, 255, 0.6), 
-        0 0 30px rgba(0, 212, 255, 0.6), 
-        0 0 45px rgba(123, 104, 238, 0.6), 
-        0 0 60px rgba(255, 105, 180, 0.6);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    font-size: 2em;
-    font-weight: bold;
-    
-   
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-} 
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Image avec cadre néon animé */
-#CHAPITEAU img {
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-    border: 6px solid transparent;
-    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ffea, #0ff);
-    background-size: 400% 400%;
-    animation: neonBorder 6s linear infinite;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
-
-/* Animation du cadre néon */
-@keyframes neonBorder {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Rotation de la photo au survol */
-#CHAPITEAU:hover img {
-    transform: rotate(10deg) scale(1.08);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
-}
-
-/* Nom/prénom en gris clair avec ombre subtile */
-#CHAPITEAU p {
-    font-size: 20px;
-    font-weight: bold;
-    color: #f0f0f0;
-    text-align: center;
-    margin-top: 15px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-    transition: transform 0.8s ease, color 0.4s ease;
-}
-
-/* Rotation du texte au survol */
-#CHAPITEAU:hover p {
+#THOUVEREZ:hover {
     transform: rotate(360deg);
-    color: #00ffff;
-
 }
 
-/* --- LE SURVOL (C'EST ICI QUE ÇA DEVIENT FOU) --- */
-#KUS:hover {
-   
-    transform: scale(1.2) rotate(-3deg) translateY(-15px);
 
-   
-    filter: hue-rotate(180deg) brightness(1.3);
+/* Style général de la page */
+#MABIKA_DITAMBA {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4bc0c8, #c779d0, #feac5e);
+    color: white;
+}
 
-   
-    box-shadow: 
-        0 0 30px rgba(0, 255, 255, 1), 
-        0 0 60px rgba(255, 0, 255, 1), 
-        0 0 90px rgba(255, 255, 0, 1), 
-        inset 0 0 50px rgba(255, 255, 255, 0.8); 
-   
-    border: 8px solid #ffffff;
-    
-    
-    letter-spacing: 5px;
-    
-    
+/* Section avec ton identifiant */
+#MABIKA_DITAMBA {
+    max-width: 800px;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Titre animé */
+#MABIKA_DITAMBA h1 {
+    font-size: 45px;
+    animation: colorRotate 5s infinite linear;
+}
+
+/* Bouton stylé */
+#MABIKA_DITAMBA button {
+    background: #ffcc00;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#MABIKA_DITAMBA button:hover {
+    transform: scale(1.15) rotate(3deg);
+}
+
+/* Émojis qui bougent */
+.emoji {
+    font-size: 40px;
+    display: inline-block;
+    animation: bounce 1s infinite alternate ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes colorRotate {
+    0% {
+        color: #ff4d4d;
+    }
+    33% {
+        color: #4dff4d;
+    }
+    66% {
+        color: #4d4dff;
+    }
+    100% {
+        color: #ff4d4d;
+    }
+}
+
+/* --- STYLE CYBERPUNK NÉON GLITCH --- */
+#BRAHIM {
+    background: linear-gradient(135deg, #0a0014, #120033, #001a2e);
+    border: none;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 0 25px #8a2be2,
+    0 0 50px #00eaff;
+
+    animation: neonPulse 4s infinite alternate ease-in-out;
+}
+
+/* Pulsation néon bleue/violette */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 20px #8a2be2, 0 0 35px #00eaff;
+    }
+    100% {
+        box-shadow: 0 0 50px #b300ff, 0 0 75px #00ffff;
+    }
 }
 
 
-#KUS::before {
-    content: "✨ Bienvenue chez Yekzan ✨";
-    display: block;
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 
-        0 0 10px rgba(255, 255, 255, 0.8), 
-        0 0 20px rgba(0, 255, 255, 0.8);
-    animation: textGlow 1.5s infinite alternate;
-    
-    
-    transition: all 0.4s ease;
+/* ---- LIGNES DE SCAN CYBERPUNK ---- */
+#BRAHIM::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    background: repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.04) 0px,
+            rgba(255, 255, 255, 0.04) 2px,
+            transparent 4px
+    );
+
+    animation: scanLines 6s linear infinite;
+    z-index: 2;
+}
+
+@keyframes scanLines {
+    0% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
 }
 
 
-#KUS:hover::before {
-    text-shadow: 0 0 30px white;
-    transform: scale(1.1);
-    color: #fff;
+/* ---- GLITCH BORDURE CYBERPUNK ---- */
+#BRAHIM::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 22px;
+
+    background: linear-gradient(120deg, #00eaff, #b300ff, #00eaff);
+    background-size: 300% 300%;
+    filter: blur(10px);
+
+    animation: borderFlow 4s infinite linear;
+    z-index: -1;
 }
 
+@keyframes borderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* ---- IMAGE STYLE CYBERPUNK ---- */
+#BRAHIM img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    border: 3px solid #00eaff;
+
+    box-shadow: 0 0 20px #00eaff,
+    0 0 40px #b300ff;
+
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Glitch image au survol */
+#BRAHIM:hover img {
+    transform: scale(1.05);
+    filter: contrast(1.4) saturate(1.6);
+
+    animation: imageGlitch 0.4s steps(2) infinite;
+}
+
+@keyframes imageGlitch {
+    0% {
+        transform: translate(0);
+    }
+    30% {
+        transform: translate(-3px, 2px) skewX(8deg);
+    }
+    60% {
+        transform: translate(4px, -2px) skewX(-6deg);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+/* ---- TEXTE CYBERPUNK ---- */
+#BRAHIM p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #00eaff;
+    font-family: 'Orbitron', 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 5px #00eaff,
+    0 0 15px #b300ff,
+    0 0 25px #00ffff;
+
+    position: relative;
+    z-index: 3;
+
+    animation: textGlow 2s infinite alternate ease-in-out;
+}
+
+/* Glow néon doux */
 @keyframes textGlow {
-    from { opacity: 0.8; }
-    to { opacity: 1; text-shadow: 0 0 20px white; }
+    0% {
+        text-shadow: 0 0 10px #00eaff, 0 0 25px #b300ff;
+    }
+    100% {
+        text-shadow: 0 0 20px #00ffff, 0 0 35px #ff00f2;
+    }
 }
+
+
+/* ---- GLITCH TEXTE ---- */
+#BRAHIM p::after,
+#BRAHIM p::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+#BRAHIM p::before {
+    color: #ff00f2;
+    transform: translate(-2px, 0);
+    animation: glitch1 0.25s infinite;
+}
+
+#BRAHIM p::after {
+    color: #00eaff;
+    transform: translate(2px, 0);
+    animation: glitch2 0.25s infinite;
+}
+
+@keyframes glitch1 {
+    0% {
+        clip-path: inset(20% 0 40% 0);
+    }
+    50% {
+        clip-path: inset(5% 0 65% 0);
+        transform: translate(-3px, -1px);
+    }
+    100% {
+        clip-path: inset(35% 0 10% 0);
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        clip-path: inset(10% 0 50% 0);
+    }
+    50% {
+        clip-path: inset(40% 0 20% 0);
+        transform: translate(3px, 1px);
+    }
+    100% {
+        clip-path: inset(15% 0 35% 0);
+    }
+}
+
+/* Style personnalisé pour YEBOAH Michael */
+
+#YEBOAH {
+    border-color: #2563eb !important;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+    animation: slideInCard 0.6s ease-out, gradientShift 4s ease infinite, borderGlow 2s ease-in-out infinite, rotateBorder 6s linear infinite;
+    position: relative;
+    overflow: hidden;
+    border-width: 3px;
+}
+
+#YEBOAH::before {
+    content: "✨";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    animation: twinkle 2s ease-in-out infinite, spin 3s linear infinite;
+    z-index: 10;
+}
+
+#YEBOAH::after {
+    content: "🌟";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2em;
+    animation: float 3s ease-in-out infinite, pulse-emoji 1.5s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes beigeGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 #LANGLET {
     position: relative;
@@ -330,7 +365,7 @@
     padding: 15px;
     display: inline-block;
     border: 4px solid transparent;
-    box-shadow: 0 0 15px rgba(0,255,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
     overflow: hidden; /* Pour que le motif reste dans la carte */
     transition: transform 0.4s ease;
 }
@@ -343,11 +378,10 @@
     width: 100%;
     height: 100%;
     background-image: repeating-linear-gradient(
-        45deg,
-        rgba(139,69,19,0.15), /* Marron clair */
-        rgba(139,69,19,0.15) 10px,
-        rgba(218,165,32,0.15) 10px,
-        rgba(218,165,32,0.15) 20px
+            45deg,
+            rgba(139, 69, 19, 0.15), /* Marron clair */ rgba(139, 69, 19, 0.15) 10px,
+            rgba(218, 165, 32, 0.15) 10px,
+            rgba(218, 165, 32, 0.15) 20px
     );
     z-index: 0;
     pointer-events: none;
@@ -355,9 +389,15 @@
 
 
 @keyframes beigeGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -378,9 +418,15 @@
 
 
 @keyframes neonBorder {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 
@@ -411,23 +457,66 @@
 
 
 @keyframes shakeZoom {
-    0% { transform: scale(1) translateX(0); }
-    25% { transform: scale(1.1) translateX(-3px); }
-    50% { transform: scale(1) translateX(3px); }
-    75% { transform: scale(1.1) translateX(-3px); }
-    100% { transform: scale(1) translateX(0); }
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    25% {
+        transform: scale(1.1) translateX(-3px);
+    }
+    50% {
+        transform: scale(1) translateX(3px);
+    }
+    75% {
+        transform: scale(1.1) translateX(-3px);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+/* === Style Dark Moderne pour BEKTAS === */
+
+#BEKTAS {
+    background: #0b0f1a;
+    border-radius: 18px;
+    padding: 15px;
+    border: 2px solid #38bdf8;
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#BEKTAS img {
+    border-radius: 14px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#BEKTAS p {
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#BEKTAS:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 1);
+}
+
+#BEKTAS:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.15);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-#MILANDOU{
+#MILANDOU {
     background: linear-gradient(90deg, #0f3556, #176b9a);
     font-family: 'Playfair Display', 'Times New Roman', serif;
     color: #fefefe;
     border-radius: 30px;
 }
 
-#MILANDOU:hover{
+#MILANDOU:hover {
     background: linear-gradient(90deg, #176b9a, #0f3556);
     color: #fefefe;
     transform: scale(1.15);
@@ -436,101 +525,605 @@
 
 /* 🌈 Effet multicolore animé uniquement pour ta case */
 #GEBLEUX {
-  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede, #f9f871);
-  background-size: 400% 400%;
-  animation: pulseColor 10s ease infinite;
-  border: 2px solid #fff !important;
-  box-shadow: 0 0 25px rgba(255,255,255,0.5);
-  transform: rotate(-1deg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  border-radius: 16px;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede, #f9f871);
+    background-size: 400% 400%;
+    animation: pulseColor 10s ease infinite;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-radius: 16px;
 }
 
 /* Animation du fond multicolore */
 @keyframes pulseColor {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Effet au survol */
 #GEBLEUX:hover {
-  transform: scale(1.05) rotate(0deg);
-  box-shadow: 0 0 35px rgba(255,255,255,0.7);
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.7);
 }
 
 /* 🎞️ Animation photo : rotation 360° au survol */
 #GEBLEUX img {
-  transition: transform 1s ease-in-out;
-  cursor: pointer;
-  border-radius: 12px;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    border-radius: 12px;
 }
 
 #GEBLEUX img:hover {
-  transform: rotate(360deg) scale(1.05);
+    transform: rotate(360deg) scale(1.05);
+}
+
+#YEBOAH:hover {
+    border-color: #1e40af !important;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6), 0 0 30px rgba(59, 130, 246, 0.4), inset 0 0 20px rgba(59, 130, 246, 0.1);
+    transform: translateY(-8px) scale(1.05) rotate(1deg);
+    animation: colorPulse 1.5s ease infinite, shake 0.5s ease;
+}
+
+#YEBOAH p::before {
+    content: "👤 ";
+    margin-right: 8px;
+    animation: bounce 2s ease-in-out infinite, wiggle 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+#YEBOAH img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 6px;
+    object-fit: cover;
+    animation: shimmer 3s ease-in-out infinite, imageGlow 4s ease-in-out infinite;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+#YEBOAH:hover img {
+    transform: scale(1.12) rotate(3deg);
+    filter: brightness(1.2) saturate(1.3) drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+    animation: none;
+}
+
+#YEBOAH p {
+    color: #1e40af;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: colorFlash 3s ease infinite, textGlow 2s ease-in-out infinite;
+    text-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+#YEBOAH:hover p {
+    color: #1e3a8a;
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    animation: textPulse 1s ease infinite;
+}
+
+#YEBOAH a {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Background animated particles effect */
+#YEBOAH::before {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+    animation: twinkle 2s ease-in-out infinite, spin 3s linear infinite, pulse-bg 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes slideInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px) rotateX(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6), 0 0 30px rgba(59, 130, 246, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.9), 0 0 50px rgba(59, 130, 246, 0.8);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    }
+    25% {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+    }
+    75% {
+        background: linear-gradient(135deg, #93c5fd 0%, #dbeafe 100%);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: #2563eb;
+    }
+    50% {
+        border-color: #3b82f6;
+    }
+}
+
+@keyframes rotateBorder {
+    0% {
+        background-image: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    }
+    100% {
+        background-image: linear-gradient(225deg, #eff6ff 0%, #dbeafe 100%);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-bg {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse-emoji {
+    0%, 100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(0deg);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.08);
+    }
+}
+
+@keyframes imageGlow {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    }
+    50% {
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+    }
+}
+
+@keyframes colorFlash {
+    0%, 100% {
+        color: #1e40af;
+    }
+    50% {
+        color: #3b82f6;
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    }
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+#COBAN {
+    background: #111;
+    border: 2px solid #ff1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 30, 30, 0.7);
+    transition: 0.2s;
+}
+
+#COBAN:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 35px rgba(255, 30, 30, 1);
+}
+
+#COBAN p {
+    color: #ff1e1e;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+}
+
+
+/* Texte */
+#COBAN p {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff1a1a;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+}
+
+/* =========================================
+   STYLE PERSONNALISÉ "ULTIMATE RGB" POUR LILLIAN
+   ========================================= */
+
+/* 0. Importation de la police futuriste "Orbitron" depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* 1. Animation des couleurs RGB (Bordure + Ombre) */
+@keyframes rgb-glow-lillian {
+    0% {
+        border-color: #ff0000;
+        box-shadow: 0 0 15px #ff0000;
+    }
+    17% {
+        border-color: #ffff00;
+        box-shadow: 0 0 15px #ffff00;
+    }
+    33% {
+        border-color: #00ff00;
+        box-shadow: 0 0 15px #00ff00;
+    }
+    50% {
+        border-color: #00ffff;
+        box-shadow: 0 0 15px #00ffff;
+    }
+    67% {
+        border-color: #0000ff;
+        box-shadow: 0 0 15px #0000ff;
+    }
+    83% {
+        border-color: #ff00ff;
+        box-shadow: 0 0 15px #ff00ff;
+    }
+    100% {
+        border-color: #ff0000;
+        box-shadow: 0 0 15px #ff0000;
+    }
+}
+
+/* 2. Animation de Lévitation (Flottement) */
+@keyframes float-lillian {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* 3. Animation du FOND (Background) Liquide */
+@keyframes rainbow-bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 4. Configuration Principale du Cadre */
+#LACHIZE {
+    /* --- TYPOGRAPHIE --- */
+    font-family: 'Orbitron', sans-serif; /* Nouvelle police */
+    font-weight: 700; /* Gras */
+    color: white; /* Texte en blanc pour le contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre noire sous le texte pour la lisibilité */
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px; /* Coins un peu arrondis */
+
+    /* --- BORDURE --- */
+    border-width: 4px !important;
+    border-style: solid !important;
+
+    /* --- FOND RGB ANIMÉ --- */
+    /* On crée un dégradé long qui contient toutes les couleurs */
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff0000);
+    background-size: 400% 400%; /* On agrandit le fond pour pouvoir le bouger */
+
+    /* --- LANCEMENT DES ANIMATIONS --- 
+       On ajoute 'rainbow-bg' à la liste des animations existantes */
+    animation: rgb-glow-lillian 3s linear infinite,
+    float-lillian 4s ease-in-out infinite,
+    rainbow-bg 8s ease infinite; /* Fond plus lent (8s) pour un effet fluide */
+
+    transition: transform 0.3s ease;
+}
+
+/* 5. Comportement au survol (Hover) */
+#LACHIZE:hover {
+    /* On pause la lévitation pour faciliter le clic, mais le RGB continue */
+    animation-play-state: running, paused, running;
+
+    transform: scale(1.1) translateY(-12px);
+    z-index: 50;
+    cursor: pointer;
+
+    /* Petit bonus : on accélère le fond quand on passe la souris */
+    animation-duration: 3s, 4s, 2s;
+}
+
+/* --- FIN DU STYLE POUR LILLIAN --- */
+#AGDIK {
+    background-color: #B539A7;
+    border-radius: inherit;
+    background: conic-gradient(
+            red,
+            orange,
+            yellow,
+            lime,
+            cyan,
+            blue,
+            magenta,
+            red
+    );
+    display: inline-block;
+    animation: rotate 3s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+#MILANDOU {
+    background: linear-gradient(90deg, #0f3556, #176b9a);
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    color: #fefefe;
+    border-radius: 30px;
+}
+
+#MILANDOU:hover {
+    background: linear-gradient(90deg, #176b9a, #0f3556);
+    color: #fefefe;
+    transform: scale(1.15);
+
+}
+
+/* 🌈 Effet multicolore animé uniquement pour ta case */
+#GEBLEUX {
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede, #f9f871);
+    background-size: 400% 400%;
+    animation: pulseColor 10s ease infinite;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-radius: 16px;
+}
+
+/* Animation du fond multicolore */
+@keyframes pulseColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Effet au survol */
+#GEBLEUX:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.7);
+}
+
+/* 🎞️ Animation photo : rotation 360° au survol */
+#GEBLEUX img {
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#GEBLEUX img:hover {
+    transform: rotate(360deg) scale(1.05);
 }
 
 /* Texte du nom avec licorne 🦄 */
 #GEBLEUX p {
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.2em;
-  text-shadow: 0 0 4px rgba(0,0,0,0.6);
-  position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    position: relative;
 }
 
 /* Ajout automatique de l’emoji licorne après ton nom */
 #GEBLEUX p::after {
-  content: " 🦄";
-  font-size: 1.2em;
-  margin-left: 6px;
+    content: " 🦄";
+    font-size: 1.2em;
+    margin-left: 6px;
 }
 
-/* ---- STYLE DE LA CARTE ÉTUDIANT (VIOLET) ---- */
+/* ---- STYLE SUPER-HÉROS ROUGE ---- */
 #ABOU_EL_KHAIR {
-    background: linear-gradient(135deg, #6a0dad, #b067ff); /* Violet moderne */
+    background: radial-gradient(circle at top, #ff1a1a 0%, #c40000 55%, #4d0000 100%);
     border: none;
-    border-radius: 20px;
+    border-radius: 22px;
 
-    padding: 20px;
+    padding: 22px;
     margin: 20px;
 
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6),
+    0 0 55px rgba(150, 0, 0, 0.5);
+    position: relative;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet hover sur la carte */
+/* Effet "power up" au survol */
 #ABOU_EL_KHAIR:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 18px rgba(0,0,0,0.25);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 40, 40, 0.9),
+    0 0 90px rgba(255, 230, 0, 0.7);
 }
 
-/* Image dans la carte */
+/* Bordure énergétique rouge → jaune (style Flash/Iron Man) */
+#ABOU_EL_KHAIR::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #ff0000, #ffe600, #ff0000);
+    z-index: -1;
+    filter: blur(10px);
+    animation: heroPulse 3s infinite linear;
+}
+
+@keyframes heroPulse {
+    0% {
+        opacity: 0.45;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.45;
+    }
+}
+
+/* PHOTO : style héroïque avec cadre jaune */
 #ABOU_EL_KHAIR img {
     width: 100%;
     height: 260px;
     object-fit: cover;
     border-radius: 15px;
 
-    border: 3px solid white;
+    border: 4px solid #ffe600; /* jaune héros */
     margin-bottom: 10px;
 
-    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 0 25px rgba(255, 230, 0, 0.4);
+
+    transition: transform 0.6s ease-in-out, box-shadow 0.3s ease;
 }
 
-/* Rotation de la photo au survol */
+/* Rotation héroïque + glow jaune/rouge */
 #ABOU_EL_KHAIR:hover img {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.12);
+    box-shadow: 0 0 45px rgba(255, 230, 0, 0.9),
+    0 0 75px rgba(255, 0, 0, 0.8);
 }
 
-/* Nom sous la photo */
+/* Nom style "super héros" */
 #ABOU_EL_KHAIR p {
-    color: white;
+    color: #ffe600;
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-shadow: 0 2px 3px rgba(0,0,0,0.25);
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.9),
+    0 0 14px rgba(255, 230, 0, 0.9);
+    font-family: 'Impact', 'Arial Black', sans-serif;
 }
 
 #BEROUD {
@@ -548,8 +1141,12 @@
 }
 
 @keyframes gradientShift-beroud {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 #BEROUD::before {
@@ -565,8 +1162,12 @@
 }
 
 @keyframes spin-beroud {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 #BEROUD:hover {
@@ -593,13 +1194,13 @@
 }
 
 @keyframes pulse-beroud {
-    0%, 100% { 
-        opacity: 0.15; 
-        transform: scale(1); 
+    0%, 100% {
+        opacity: 0.15;
+        transform: scale(1);
     }
-    50% { 
-        opacity: 0.35; 
-        transform: scale(1.3); 
+    50% {
+        opacity: 0.35;
+        transform: scale(1.3);
     }
 }
 
@@ -652,8 +1253,12 @@
 }
 
 @keyframes gradientText-beroud {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 #BEROUD:hover p {
@@ -672,8 +1277,12 @@
 }
 
 @keyframes bounce-beroud {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 /* Effet de particules supplémentaire */
@@ -688,10 +1297,150 @@
 }
 
 @keyframes rotate-beroud {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-=======
+
+/* Carte */
+#CHAPITEAU {
+    background: linear-gradient(135deg, #87CEFA, #1E3A8A); /* Bleu clair -> bleu foncé */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* Dégradé animé */
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 4px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animation du fond dégradé */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Image avec cadre néon animé */
+#CHAPITEAU img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ffea, #0ff);
+    background-size: 400% 400%;
+    animation: neonBorder 6s linear infinite;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Animation du cadre néon */
+@keyframes neonBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Rotation de la photo au survol */
+#CHAPITEAU:hover img {
+    transform: rotate(10deg) scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+/* Nom/prénom en gris clair avec ombre subtile */
+#CHAPITEAU p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.8s ease, color 0.4s ease;
+}
+
+/* Rotation du texte au survol */
+#CHAPITEAU:hover p {
+    transform: rotate(360deg);
+    color: #00ffff;
+}
+
+#EGEA {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #1976d2, #42a5f5, #64b5f6, #2196f3) 1;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#EGEA::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #0d47a1, #1976d2, #42a5f5, #64b5f6, #90caf9);
+    background-size: 300% 300%;
+    border-radius: 12px;
+    z-index: -1;
+    animation: gradient-border 4s ease infinite;
+}
+
+#EGEA:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+}
+
+#EGEA img {
+    transition: all 0.4s ease;
+    border-radius: 8px;
+}
+
+#EGEA:hover img {
+    transform: scale(1.08) rotate(2deg);
+    filter: brightness(1.1);
+}
+
+#EGEA p {
+    color: #0d47a1;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@keyframes gradient-border {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 #MOENG {
     background: linear-gradient(135deg, rgba(255, 87, 34, 0.3), rgba(255, 152, 0, 0.3), rgba(255, 193, 7, 0.3));
     backdrop-filter: blur(10px);
@@ -729,4 +1478,293 @@
     margin-top: 10px;
     text-shadow: 0 2px 8px rgba(255, 87, 34, 0.6);
 }
->>>>>>> d6fe24e7df1240ba6516ac78dc5d92b311738f20
+
+
+/* STYLE PRINCIPAL POUR TOUTES LES IMAGES */
+#FAUJANET_MARTINS img {
+    display: block;
+    max-width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+
+    /* Bordure arc-en-ciel animée */
+    border: 6px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+            45deg,
+            #ff00ff,
+            #00ffff,
+            #ffff00,
+            #ff6600,
+            #00ff00,
+            #ff00ff
+    );
+
+    /* Animations permanentes */
+    animation: fadeIn 1s ease both,
+    neonBorder 6s linear infinite,
+    pulse 3s ease-in-out infinite,
+    floating 4s ease-in-out infinite;
+
+    transform-style: preserve-3d;
+    transition: transform 1s ease,
+    filter 0.5s ease;
+}
+
+/* AU SURVOL : BACKFLIP 360° + SURBOOST DE COULEURS */
+#FAUJANET_MARTINS img:hover {
+    transform: rotateX(360deg) scale(1.15);
+    filter: brightness(1.4) saturate(1.6);
+}
+
+/* --- ANIMATIONS --- */
+
+/* Apparition progressive */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bordure arc-en-ciel changeante */
+@keyframes neonBorder {
+    0% {
+        border-image-source: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff);
+    }
+    25% {
+        border-image-source: linear-gradient(45deg, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff, #00ffff);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #ffff00, #ff6600, #00ff00, #ff00ff, #00ffff, #ffff00);
+    }
+    75% {
+        border-image-source: linear-gradient(45deg, #ff6600, #00ff00, #ff00ff, #00ffff, #ffff00, #ff6600);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff);
+    }
+}
+
+/* Pulsation lumineuse */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 12px rgba(255, 0, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 28px rgba(0, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 12px rgba(255, 0, 255, 0.6);
+    }
+}
+
+/* Flottement vertical */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#AKIN {
+    border: 5px solid #474787;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(145deg, #6a5acd, #483d8b);
+    color: #fff;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+
+#AKIN:hover {
+    border-color: #2c2c54;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transform: translateY(-5px) scale(1.05);
+    background: linear-gradient(145deg, #7b68ee, #5a4fcf);
+/
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 rgba(114, 76, 230, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 20px rgba(114, 76, 230, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(114, 76, 230, 0.4);
+    }
+}
+
+#AKIN {
+    animation: pulse 3s infinite;
+}
+
+/* --- LE SURVOL (C'EST ICI QUE ÇA DEVIENT FOU) --- */
+#KUS:hover {
+
+    transform: scale(1.2) rotate(-3deg) translateY(-15px);
+
+
+    filter: hue-rotate(180deg) brightness(1.3);
+
+
+    box-shadow: 0 0 30px rgba(0, 255, 255, 1),
+    0 0 60px rgba(255, 0, 255, 1),
+    0 0 90px rgba(255, 255, 0, 1),
+    inset 0 0 50px rgba(255, 255, 255, 0.8);
+
+    border: 8px solid #ffffff;
+
+
+    letter-spacing: 5px;
+
+
+    cursor: pointer;
+}
+
+#KUS {
+    background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
+    background-size: 300% 300%;
+    animation: gradientShift 10s infinite;
+    border: 8px double rgba(255, 255, 255, 0.8);
+    box-shadow:
+            0 0 15px rgba(0, 255, 255, 0.6),
+            0 0 30px rgba(0, 212, 255, 0.6),
+            0 0 45px rgba(123, 104, 238, 0.6),
+            0 0 60px rgba(255, 105, 180, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+
+
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#KUS
+p {
+    font-size: 2em;
+
+}
+#KUS::before {
+    content: "✨ Bienvenue chez Yekzan ✨";
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.8);
+    animation: textGlow 1.5s infinite alternate;
+
+
+    transition: all 0.4s ease;
+}
+
+
+#KUS:hover::before {
+    text-shadow: 0 0 30px white;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+@keyframes textGlow {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 20px white;
+    }
+}
+
+/* ----- CARD PREMIUM pour le trombinoscope ----- */
+/* Carte dans le trombinoscope (index) */
+#RAHALI {
+    border: none;
+    border-radius: 18px;
+    padding: 20px;
+    background: rgba(99, 102, 241, 0.15);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Effet 3D */
+#RAHALI:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.3);
+    border-radius: 14px;
+    background: rgba(59,130,246,0.12);
+    box-shadow: 0 6px 16px rgba(37,99,235,0.4);
+}
+
+/* ----- PHOTO (taille maîtrisée) ----- */
+#RAHALI img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Survol : glow + zoom */
+#RAHALI:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 0 18px rgba(99, 102, 241, 0.9);
+    border-radius: 999px;
+    border: 3px solid rgba(59,130,246,0.8);
+}
+
+/* ----- TEXTE ----- */
+#RAHALI p {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/*
+Style pour l'image du CV avec une bordure multicolore
+*/
+#JULLIAND img {
+    max-width: 100%;
+    max-height: 100%;
+    /* Bordure épaisse et multicolore avec un dégradé */
+    border: 10px solid;
+    border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3) 1;
+
+    /* Petite ombre portée pour faire ressortir l'image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    /* Marge pour que le cadre ne touche pas les bords si l'image est trop grande */
+    margin: 20px;
+}
+
+#JULLIAND p {
+    /* Texte en gras */
+    font-weight: bold;
+}
