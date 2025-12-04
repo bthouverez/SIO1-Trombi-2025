@@ -4,17 +4,350 @@
   <meta charset="utf-8">
   <title>CV - Melevan Akin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:20px} .pdf-wrap{max-width:900px;margin:0 auto}</style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #2c2c54;
+      --secondary-color: #474787;
+      --text-color: #333;
+      --bg-gradient-start: #1e1e2f;
+      --bg-gradient-end: #2c2c54;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    h1 {
+      margin-top: 30px; /* Marge réduite pour remonter le titre */
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+      letter-spacing: 2px;
+      animation: fadeIn 1.2s ease;
+      text-transform: uppercase;
+    }
+
+    .cv-container {
+      width: 90%;
+      max-width: 1000px;
+      background: #fff;
+      color: var(--text-color);
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      animation: slideUp 1s ease;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Colonne de gauche (Sidebar) */
+    .sidebar {
+      background-color: #f4f4f9;
+      width: 30%;
+      padding: 30px;
+      border-right: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      text-align: center; /* Centrer le contenu de la sidebar, y compris la photo */
+    }
+
+    /* Style de la photo de profil */
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Rendre la photo ronde */
+      object-fit: cover; /* S'assure que l'image couvre bien le cercle sans être déformée */
+      border: 4px solid #fff; /* Bordure blanche pour faire ressortir la photo */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    /* Alignement à gauche pour le texte de contact */
+    .contact-info p {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Colonne de droite (Main) */
+    .main-content {
+      width: 70%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 5px;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      text-align: left; /* S'assurer que les titres H2 sont alignés à gauche */
+    }
+
+    h3 {
+      color: var(--secondary-color);
+      margin: 15px 0 5px 0;
+      font-size: 1.1rem;
+    }
+
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    /* Styles pour les contacts */
+    .contact-icon {
+      margin-right: 10px;
+      width: 18px;
+      text-align: center;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    /* Styles pour les points de compétence (Dots) */
+    .skill-item {
+      margin-bottom: 12px;
+      text-align: left; /* Alignement à gauche pour les compétences */
+    }
+    .skill-name {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+    .dots-container {
+      display: flex;
+      gap: 5px;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ddd;
+    }
+    .dot.filled {
+      background-color: var(--secondary-color);
+    }
+
+    /* Liste détaillée */
+    .tech-skills-list {
+      list-style: none;
+      padding: 0;
+    }
+    .tech-skills-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+    .tech-skills-list li::before {
+      content: "•";
+      color: var(--primary-color);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+
+    .education-item, .experience-item {
+      margin-bottom: 20px;
+    }
+
+    .date-badge {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design (Mobile) */
+    @media (max-width: 768px) {
+      .cv-container {
+        flex-direction: column;
+      }
+      .sidebar, .main-content {
+        width: 100%;
+        border-right: none;
+      }
+      .sidebar {
+        background-color: #f0f0f5;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <h1>CV — Melevan AKIN</h1>
-  <div class="pdf-wrap">
-    <embed src="cv-Melevan.pdf" type="application/pdf" width="100%" height="800px" />
-    <p>Si le PDF ne s'affiche pas, <a href="cv-Melevan.pdf" download>Télécharger le CV</a></p>
+
+  <div class="cv-container">
+    
+    <aside class="sidebar">
+      
+      <img src="photo_cv.jpg" alt="Photo de Melevan Akin" class="profile-photo">
+
+      <div class="section contact-info">
+        <h2>Infos Personnelles</h2>
+        <p><span class="contact-icon">👤</span> Melevan AKIN</p>
+        <p><span class="contact-icon">✉️</span> akinmelevan@gmail.com</p>
+        <p><span class="contact-icon">📞</span> 07 71 24 74 64</p>
+        <p><span class="contact-icon">🏠</span> 69400 Villefranche-sur-Saône</p>
+      </div>
+
+      <div class="section">
+        <h2>Compétences</h2>
+        <div class="skill-item">
+          <span class="skill-name">Gestion des réseaux</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Programmation</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Support aux utilisateurs</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Virtualisation</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Sécurité des données</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Langues</h2>
+        <div class="skill-item">
+          <span class="skill-name">Anglais</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Turc</span>
+          <div class="dots-container">
+            <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <main class="main-content">
+      
+      <div class="section">
+        <h2>Profil</h2>
+        <p>Passionné par les réseaux et la cybersécurité, je suis motivé, rigoureux et toujours prêt à relever de nouveaux défis. Mon objectif est de mettre mes compétences et mon énergie au service d’une entreprise dynamique, tout en continuant à apprendre et à évoluer professionnellement.</p>
+      </div>
+
+      <div class="section">
+        <h2>Savoir-Faire Technique</h2>
+        <ul class="tech-skills-list">
+            <li>Administration Système & Réseau : Installation, configuration et mise en réseau de postes de travail.</li>
+            <li>Services Réseaux : Déploiement de serveurs de base (DNS, Messagerie) et gestion des connectivités (IP, Wi-Fi).</li>
+            <li>Sécurité & Accès : Gestion des droits utilisateurs et des dossiers partagés (ACL).</li>
+            <li>Virtualisation : Création et paramétrage de machines virtuelles.</li>
+            <li>Maintenance & Support : Diagnostic matériel/logiciel et résolution d'incidents (Support niveau 1 & 2).</li>
+            <li>Environnement Utilisateur : Maîtrise du pack Office 365 et accompagnement des utilisateurs.</li>
+            <li>Savoir-être : Communication technique, esprit d'analyse et résolution de problèmes.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Expérience Professionnelle</h2>
+        <div class="experience-item">
+          <div class="date-badge">2021</div>
+          <h3>Stage chez Bial-X</h3>
+          <p>Découverte des métiers dans l'univers de l'informatique tel que :</p>
+          <ul>
+            <li>Big Data Scientist</li>
+            <li>Administrateur réseau</li>
+            <li>Développeur web et application</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Parcours Scolaire</h2>
+        <div class="education-item">
+          <div class="date-badge">Sept. 2025 (En cours)</div>
+          <h3>BTS SIO option SISR (Solutions d'infrastructure, systèmes et réseaux)</h3>
+          <p><em>Business School by CSND, Limas</em><br>
+          Formation spécialisée dans l'administration et la sécurisation des systèmes et réseaux informatiques.</p>
+        </div>
+
+        <div class="education-item">
+          <div class="date-badge">2021 - 2025</div>
+          <h3>BAC STI2D option SIN (Systèmes d'Information et Numérique)</h3>
+          <p><em>Lycée Louis Armand, Villefranche-sur-Saône</em><br>
+          Formation technologique orientée vers l'informatique, les réseaux et les systèmes numériques.</p>
+        </div>
+      </div>
+
+    </main>
   </div>
 </body>
 </html>
- 
- 
- 
- 

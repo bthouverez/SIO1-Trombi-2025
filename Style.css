@@ -1,0 +1,32 @@
+#AKIN {
+    border: 5px solid #474787;           /* Contour initial */
+    border-radius: 15px;                 /* Coins plus arrondis pour un look moderne */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Ombre plus douce et profonde */
+    background: linear-gradient(145deg, #6a5acd, #483d8b); /* Dégradé dynamique */
+    color: #fff;                         /* Texte blanc pour contraste */
+    padding: 20px;                       /* Espacement intérieur */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.4s ease;           /* Animation douce pour tous les changements */
+    cursor: pointer;                     /* Curseur pointer pour interactivité */
+}
+
+/* Effet de survol plus dynamique */
+#AKIN:hover {
+    border-color: #2c2c54;               /* Contour plus foncé */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35); /* Ombre plus prononcée */
+    transform: translateY(-5px) scale(1.05);     /* Léger effet de "pop" */
+    background: linear-gradient(145deg, #7b68ee, #5a4fcf); /* Dégradé animé */
+}
+
+/* Animation de pulsation subtile */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 rgba(114, 76, 230, 0.4); }
+    70% { box-shadow: 0 0 20px rgba(114, 76, 230, 0.6); }
+    100% { box-shadow: 0 0 0 rgba(114, 76, 230, 0.4); }
+}
+
+#AKIN {
+    animation: pulse 3s infinite;
+}
