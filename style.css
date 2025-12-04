@@ -1,3 +1,70 @@
+    /* Style général de la page */
+#MABIKA_DITAMBA {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #4bc0c8, #c779d0, #feac5e);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section avec ton identifiant */
+#MABIKA_DITAMBA {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 40px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Titre animé */
+#MABIKA_DITAMBA h1 {
+  font-size: 45px;
+  animation: colorRotate 5s infinite linear;
+}
+
+/* Bouton stylé */
+#MABIKA_DITAMBA button {
+  background: #ffcc00;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#MABIKA_DITAMBA button:hover {
+  transform: scale(1.15) rotate(3deg);
+}
+
+/* Émojis qui bougent */
+.emoji {
+  font-size: 40px;
+  display: inline-block;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+@keyframes colorRotate {
+  0% { color: #ff4d4d; }
+  33% { color: #4dff4d; }
+  66% { color: #4d4dff; }
+  100% { color: #ff4d4d; }
+}
+
 /* --- STYLE CYBERPUNK NÉON GLITCH --- */
 #BRAHIM {
     background: linear-gradient(135deg, #0a0014, #120033, #001a2e);
