@@ -1,0 +1,692 @@
+#MOENG {
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.3), rgba(255, 152, 0, 0.3), rgba(255, 193, 7, 0.3));
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(255, 87, 34, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+#MOENG:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.5), rgba(255, 152, 0, 0.5), rgba(255, 193, 7, 0.5));
+}
+
+#MOENG img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    transition: transform 0.6s ease;
+}
+
+#MOENG:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+#MOENG p {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 0 2px 8px rgba(255, 87, 34, 0.6);
+}
+
+#AGDIK
+
+{
+	background-color: #B539A7;
+	border-radius: inherit;
+    background: conic-gradient(
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan,
+        blue,
+        magenta,
+        red
+);
+	display: inline-block;
+  animation: rotate 3s linear ;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+
+}
+/* Carte */
+#CHAPITEAU {
+    background: linear-gradient(135deg, #87CEFA, #1E3A8A); /* Bleu clair -> bleu foncé */
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite; /* Dégradé animé */
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 4px solid transparent;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animation du fond dégradé */
+#EGEA {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border: 3px solid;
+  border-image: linear-gradient(135deg, #1976d2, #42a5f5, #64b5f6, #2196f3) 1;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#EGEA::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0d47a1, #1976d2, #42a5f5, #64b5f6, #90caf9);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: gradient-border 4s ease infinite;
+}
+
+#EGEA:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+}
+
+#EGEA img {
+  transition: all 0.4s ease;
+  border-radius: 8px;
+}
+
+#EGEA:hover img {
+  transform: scale(1.08) rotate(2deg);
+  filter: brightness(1.1);
+}
+
+#EGEA p {
+  color: #0d47a1;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+#THOUVEREZ {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    background: #21BF33;
+        background: linear-gradient(299deg,rgba(33, 191, 51, 1) 0%, rgba(243, 255, 13, 1) 40%, rgba(255, 13, 13, 1) 100%, rgba(237, 83, 83, 1) 100%);
+    border-radius: 15px;
+    border: 0px;
+       font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#THOUVEREZ img {
+    border-radius: 15px;
+}
+
+#THOUVEREZ  {
+  /* 1. Définit l'animation de transformation sur 1 seconde */
+  transition: transform 1s; 
+}
+
+#THOUVEREZ :hover {
+  /* 2. Applique une rotation de 360 degrés au survol */
+  transform: rotate(360deg); 
+}
+
+/* =========================================
+   STYLE PERSONNALISÉ "ULTIMATE RGB" POUR LILLIAN
+   ========================================= */
+
+/* 0. Importation de la police futuriste "Orbitron" depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* 1. Animation des couleurs RGB (Bordure + Ombre) */
+@keyframes rgb-glow-lillian {
+    0%   { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+    17%  { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; }
+    33%  { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+    50%  { border-color: #00ffff; box-shadow: 0 0 15px #00ffff; }
+    67%  { border-color: #0000ff; box-shadow: 0 0 15px #0000ff; }
+    83%  { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
+    100% { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+}
+
+/* 2. Animation de Lévitation (Flottement) */
+@keyframes float-lillian {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 3. Animation du FOND (Background) Liquide */
+@keyframes rainbow-bg {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#KUS {
+    background: linear-gradient(135deg, #007BFF, #00D4FF, #7B68EE, #FF69B4);
+    background-size: 300% 300%;
+    animation: gradientShift 10s infinite;
+    border: 8px double rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.6), 
+        0 0 30px rgba(0, 212, 255, 0.6), 
+        0 0 45px rgba(123, 104, 238, 0.6), 
+        0 0 60px rgba(255, 105, 180, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    
+   
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} 
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Image avec cadre néon animé */
+#CHAPITEAU img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ffea, #0ff);
+    background-size: 400% 400%;
+    animation: neonBorder 6s linear infinite;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Animation du cadre néon */
+@keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Rotation de la photo au survol */
+#CHAPITEAU:hover img {
+    transform: rotate(10deg) scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+/* Nom/prénom en gris clair avec ombre subtile */
+#CHAPITEAU p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    transition: transform 0.8s ease, color 0.4s ease;
+}
+
+/* Rotation du texte au survol */
+#CHAPITEAU:hover p {
+    transform: rotate(360deg);
+    color: #00ffff;
+
+}
+
+/* --- LE SURVOL (C'EST ICI QUE ÇA DEVIENT FOU) --- */
+#KUS:hover {
+   
+    transform: scale(1.2) rotate(-3deg) translateY(-15px);
+
+   
+    filter: hue-rotate(180deg) brightness(1.3);
+
+   
+    box-shadow: 
+        0 0 30px rgba(0, 255, 255, 1), 
+        0 0 60px rgba(255, 0, 255, 1), 
+        0 0 90px rgba(255, 255, 0, 1), 
+        inset 0 0 50px rgba(255, 255, 255, 0.8); 
+   
+    border: 8px solid #ffffff;
+    
+    
+    letter-spacing: 5px;
+    
+    
+    cursor: pointer;
+}
+
+
+#KUS::before {
+    content: "✨ Bienvenue chez Yekzan ✨";
+    display: block;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(0, 255, 255, 0.8);
+    animation: textGlow 1.5s infinite alternate;
+    
+    
+    transition: all 0.4s ease;
+}
+
+
+#KUS:hover::before {
+    text-shadow: 0 0 30px white;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+@keyframes textGlow {
+    from { opacity: 0.8; }
+    to { opacity: 1; text-shadow: 0 0 20px white; }
+}
+
+#LANGLET {
+    position: relative;
+    background: linear-gradient(135deg, #f5f5dc, #e8e4c9, #f0e6d2, #dcd3b2);
+    background-size: 400% 400%;
+    animation: beigeGradient 8s ease infinite;
+    border-radius: 20px;
+    padding: 15px;
+    display: inline-block;
+    border: 4px solid transparent;
+    box-shadow: 0 0 15px rgba(0,255,0,0.4);
+    overflow: hidden; /* Pour que le motif reste dans la carte */
+    transition: transform 0.4s ease;
+}
+
+#LANGLET::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(139,69,19,0.15), /* Marron clair */
+        rgba(139,69,19,0.15) 10px,
+        rgba(218,165,32,0.15) 10px,
+        rgba(218,165,32,0.15) 20px
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+@keyframes beigeGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+#LANGLET img {
+    position: relative;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #006400, #00ff00, #ffd700, #adff2f);
+    background-size: 400% 400%;
+    animation: neonBorder 6s linear infinite;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.6s ease;
+}
+
+
+@keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+#LANGLET:hover img {
+    animation: shakeZoom 0.6s ease-in-out infinite;
+}
+
+
+#LANGLET p {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px #adff2f, 0 0 12px #ffd700;
+    transition: color 0.8s ease;
+}
+
+
+#LANGLET:hover p {
+    color: #006400;
+    animation: shakeZoom 0.6s ease-in-out infinite;
+}
+
+
+@keyframes shakeZoom {
+    0% { transform: scale(1) translateX(0); }
+    25% { transform: scale(1.1) translateX(-3px); }
+    50% { transform: scale(1) translateX(3px); }
+    75% { transform: scale(1.1) translateX(-3px); }
+    100% { transform: scale(1) translateX(0); }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+#MILANDOU{
+    background: linear-gradient(90deg, #0f3556, #176b9a);
+    font-family: 'Playfair Display', 'Times New Roman', serif;
+    color: #fefefe;
+    border-radius: 30px;
+}
+
+#MILANDOU:hover{
+    background: linear-gradient(90deg, #176b9a, #0f3556);
+    color: #fefefe;
+    transform: scale(1.15);
+
+}
+
+/* 🌈 Effet multicolore animé uniquement pour ta case */
+#GEBLEUX {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4adede, #f9f871);
+  background-size: 400% 400%;
+  animation: pulseColor 10s ease infinite;
+  border: 2px solid #fff !important;
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border-radius: 16px;
+}
+
+/* Animation du fond multicolore */
+@keyframes pulseColor {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Effet au survol */
+#GEBLEUX:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 0 35px rgba(255,255,255,0.7);
+}
+
+/* 🎞️ Animation photo : rotation 360° au survol */
+#GEBLEUX img {
+  transition: transform 1s ease-in-out;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#GEBLEUX img:hover {
+  transform: rotate(360deg) scale(1.05);
+}
+
+/* Texte du nom avec licorne 🦄 */
+#GEBLEUX p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+  position: relative;
+}
+
+/* Ajout automatique de l’emoji licorne après ton nom */
+#GEBLEUX p::after {
+  content: " 🦄";
+  font-size: 1.2em;
+  margin-left: 6px;
+}
+
+/* ---- STYLE DE LA CARTE ÉTUDIANT (VIOLET) ---- */
+#ABOU_EL_KHAIR {
+    background: linear-gradient(135deg, #6a0dad, #b067ff); /* Violet moderne */
+    border: none;
+    border-radius: 20px;
+
+    padding: 20px;
+    margin: 20px;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Effet hover sur la carte */
+#ABOU_EL_KHAIR:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 18px rgba(0,0,0,0.25);
+}
+
+/* Image dans la carte */
+#ABOU_EL_KHAIR img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    border: 3px solid white;
+    margin-bottom: 10px;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Rotation de la photo au survol */
+#ABOU_EL_KHAIR:hover img {
+    transform: rotate(360deg);
+}
+
+/* Nom sous la photo */
+#ABOU_EL_KHAIR p {
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+
+#BEROUD {
+    position: relative;
+    background: linear-gradient(135deg, rgba(26, 0, 0, 0.9) 0%, rgba(51, 0, 0, 0.9) 50%, rgba(26, 0, 0, 0.9) 100%) !important;
+    background-size: 400% 400% !important;
+    animation: gradientShift-beroud 15s ease infinite !important;
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(255, 107, 0, 0.5) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 30px 80px rgba(255, 107, 0, 0.5) !important;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">🔥</text></svg>'), auto !important;
+}
+
+@keyframes gradientShift-beroud {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+#BEROUD::before {
+    content: '🔥';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    font-size: 8em;
+    opacity: 0.1;
+    animation: spin-beroud 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes spin-beroud {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#BEROUD:hover {
+    transform: scale(1.08) rotate(-2deg) !important;
+    box-shadow: 0 40px 100px rgba(255, 107, 0, 0.8) !important;
+    border-color: #ff0064 !important;
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.3) 0%, rgba(255, 0, 100, 0.3) 100%) !important;
+}
+
+#BEROUD:hover::before {
+    animation: spin-beroud 5s linear infinite;
+    opacity: 0.2;
+}
+
+#BEROUD::after {
+    content: '💋';
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 3em;
+    opacity: 0.15;
+    animation: pulse-beroud 2s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes pulse-beroud {
+    0%, 100% { 
+        opacity: 0.15; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.35; 
+        transform: scale(1.3); 
+    }
+}
+
+#BEROUD a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#BEROUD img {
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 50% !important;
+    border: 5px solid #ff6b00 !important;
+    box-shadow: 0 15px 40px rgba(255, 107, 0, 0.6) !important;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: block;
+}
+
+#BEROUD:hover img {
+    transform: scale(1.15) rotate(8deg) !important;
+    border-color: #ff0064 !important;
+    box-shadow: 0 25px 70px rgba(255, 107, 0, 0.9) !important;
+    border-width: 6px !important;
+}
+
+#BEROUD p {
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ff6b00, #ff0064, #ff6b00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText-beroud 3s ease infinite;
+    text-align: center;
+    margin-top: 25px !important;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+}
+
+@keyframes gradientText-beroud {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+#BEROUD:hover p {
+    transform: scale(1.15);
+    letter-spacing: 6px;
+}
+
+#BEROUD p::before {
+    content: '🌶️ ';
+    animation: bounce-beroud 1s ease-in-out infinite;
+}
+
+#BEROUD p::after {
+    content: ' 🌶️';
+    animation: bounce-beroud 1s ease-in-out infinite 0.5s;
+}
+
+@keyframes bounce-beroud {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Effet de particules supplémentaire */
+#BEROUD:hover::after {
+    content: '🌹';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.5em;
+    opacity: 0.2;
+    animation: rotate-beroud 10s linear infinite;
+}
+
+@keyframes rotate-beroud {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
