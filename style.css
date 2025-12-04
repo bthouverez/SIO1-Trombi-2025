@@ -1,0 +1,86 @@
+#FAUJANET_MARTINS
+/* STYLE PRINCIPAL POUR TOUTES LES IMAGES */
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+
+    /* Bordure arc-en-ciel animée */
+    border: 6px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+        45deg,
+        #ff00ff,
+        #00ffff,
+        #ffff00,
+        #ff6600,
+        #00ff00,
+        #ff00ff
+    );
+
+    /* Animations permanentes */
+    animation:
+        fadeIn 1s ease both,
+        neonBorder 6s linear infinite,
+        pulse 3s ease-in-out infinite,
+        floating 4s ease-in-out infinite;
+
+    transform-style: preserve-3d;
+    transition:
+        transform 1s ease,
+        filter 0.5s ease;
+}
+
+/* AU SURVOL : BACKFLIP 360° + SURBOOST DE COULEURS */
+img:hover {
+    transform: rotateX(360deg) scale(1.15);
+    filter: brightness(1.4) saturate(1.6);
+}
+
+/* --- ANIMATIONS --- */
+
+/* Apparition progressive */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bordure arc-en-ciel changeante */
+@keyframes neonBorder {
+    0% {
+        border-image-source: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff);
+    }
+    25% {
+        border-image-source: linear-gradient(45deg, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff, #00ffff);
+    }
+    50% {
+        border-image-source: linear-gradient(45deg, #ffff00, #ff6600, #00ff00, #ff00ff, #00ffff, #ffff00);
+    }
+    75% {
+        border-image-source: linear-gradient(45deg, #ff6600, #00ff00, #ff00ff, #00ffff, #ffff00, #ff6600);
+    }
+    100% {
+        border-image-source: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff6600, #00ff00, #ff00ff);
+    }
+}
+
+/* Pulsation lumineuse */
+@keyframes pulse {
+    0% { box-shadow: 0 0 12px rgba(255, 0, 255, 0.6); }
+    50% { box-shadow: 0 0 28px rgba(0, 255, 255, 0.7); }
+    100% { box-shadow: 0 0 12px rgba(255, 0, 255, 0.6); }
+}
+
+/* Flottement vertical */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
