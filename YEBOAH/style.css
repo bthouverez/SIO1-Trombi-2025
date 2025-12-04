@@ -1,0 +1,269 @@
+/* Style personnalisé pour YEBOAH Michael */
+
+#YEBOAH {
+    border-color: #2563eb !important;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+    animation: slideInCard 0.6s ease-out, gradientShift 4s ease infinite, borderGlow 2s ease-in-out infinite, rotateBorder 6s linear infinite;
+    position: relative;
+    overflow: hidden;
+    border-width: 3px;
+}
+
+#YEBOAH::before {
+    content: "✨";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    animation: twinkle 2s ease-in-out infinite, spin 3s linear infinite;
+    z-index: 10;
+}
+
+#YEBOAH::after {
+    content: "🌟";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2em;
+    animation: float 3s ease-in-out infinite, pulse-emoji 1.5s ease-in-out infinite;
+    z-index: 10;
+}
+
+#YEBOAH:hover {
+    border-color: #1e40af !important;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6), 0 0 30px rgba(59, 130, 246, 0.4), inset 0 0 20px rgba(59, 130, 246, 0.1);
+    transform: translateY(-8px) scale(1.05) rotate(1deg);
+    animation: colorPulse 1.5s ease infinite, shake 0.5s ease;
+}
+
+#YEBOAH p::before {
+    content: "👤 ";
+    margin-right: 8px;
+    animation: bounce 2s ease-in-out infinite, wiggle 4s ease-in-out infinite;
+    display: inline-block;
+}
+
+#YEBOAH img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 6px;
+    object-fit: cover;
+    animation: shimmer 3s ease-in-out infinite, imageGlow 4s ease-in-out infinite;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+#YEBOAH:hover img {
+    transform: scale(1.12) rotate(3deg);
+    filter: brightness(1.2) saturate(1.3) drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+    animation: none;
+}
+
+#YEBOAH p {
+    color: #1e40af;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: colorFlash 3s ease infinite, textGlow 2s ease-in-out infinite;
+    text-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+#YEBOAH:hover p {
+    color: #1e3a8a;
+    text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    animation: textPulse 1s ease infinite;
+}
+
+#YEBOAH a {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Background animated particles effect */
+#YEBOAH::before {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+    animation: twinkle 2s ease-in-out infinite, spin 3s linear infinite, pulse-bg 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes slideInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px) rotateX(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.6), 0 0 30px rgba(59, 130, 246, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(37, 99, 235, 0.9), 0 0 50px rgba(59, 130, 246, 0.8);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    }
+    25% {
+        background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+    }
+    75% {
+        background: linear-gradient(135deg, #93c5fd 0%, #dbeafe 100%);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: #2563eb;
+    }
+    50% {
+        border-color: #3b82f6;
+    }
+}
+
+@keyframes rotateBorder {
+    0% {
+        background-image: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    }
+    100% {
+        background-image: linear-gradient(225deg, #eff6ff 0%, #dbeafe 100%);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-bg {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse-emoji {
+    0%, 100% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(0deg);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.08);
+    }
+}
+
+@keyframes imageGlow {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+    }
+    50% {
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+    }
+}
+
+@keyframes colorFlash {
+    0%, 100% {
+        color: #1e40af;
+    }
+    50% {
+        color: #3b82f6;
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+    }
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    75% {
+        transform: translateX(3px);
+    }
+}

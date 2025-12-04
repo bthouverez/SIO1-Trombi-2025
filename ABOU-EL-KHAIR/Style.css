@@ -1,0 +1,45 @@
+/* ---- STYLE DE LA CARTE ÉTUDIANT (VIOLET) ---- */
+#ABOU_EL_KHAIR {
+    background: linear-gradient(135deg, #6a0dad, #b067ff); /* Violet moderne */
+    border: none;
+    border-radius: 20px;
+
+    padding: 20px;
+    margin: 20px;
+
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Effet hover sur la carte */
+#ABOU_EL_KHAIR:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 18px rgba(0,0,0,0.25);
+}
+
+/* Image dans la carte */
+#ABOU_EL_KHAIR img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    border: 3px solid white;
+    margin-bottom: 10px;
+
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Rotation de la photo au survol */
+#ABOU_EL_KHAIR:hover img {
+    transform: rotate(360deg);
+}
+
+/* Nom sous la photo */
+#ABOU_EL_KHAIR p {
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}

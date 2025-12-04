@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>CV Marvel Comics avec Fond BD et Icônes</title>
+<style>
+    body { font-family: 'Impact', 'Arial Black', sans-serif; margin: 0; padding: 0; background: url('https://wallpapercave.com/wp/wp2636896.jpg') no-repeat center center fixed; background-size: cover; color: #000; }
+    header { background-color: #e60000; color: #fff; text-align: center; padding: 30px; border-bottom: 10px solid #ffcc00; }
+    h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 2px; text-shadow: 3px 3px #000; }
+    section { background: rgba(255,255,255,0.9); margin: 20px auto; padding: 20px; max-width: 900px; border-radius: 15px; border: 5px solid #0033cc; box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
+    h2 { font-size: 2em; color: #e60000; text-transform: uppercase; border-bottom: 4px solid #ffcc00; margin-bottom: 10px; display: flex; align-items: center; }
+    h2 img { width: 40px; height: 40px; margin-right: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 8px 0; font-size: 1.2em; }
+    .btn-download { display: inline-block; margin-top: 20px; padding: 15px 25px; background-color: #0033cc; color: #fff; font-weight: bold; text-decoration: none; border-radius: 10px; box-shadow: 4px 4px #e60000; transition: all 0.3s ease; }
+    .btn-download:hover { background-color: #ffcc00; color: #000; box-shadow: 4px 4px #0033cc; transform: scale(1.1); }
+
+/* Animations Marvel */
+@keyframes bubbleFloat {
+  0%   { transform: translateY(0) scale(1); opacity: 0.8; }
+  50%  { transform: translateY(-15px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
+@keyframes titleShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(230,0,0,0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(230,0,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(230,0,0,0); }
+}
+
+/* Bulles décoratives */
+.bubble {
+  position: fixed; width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(255,255,255,0.6); border: 2px solid #ffcc00;
+  animation: bubbleFloat 4s ease-in-out infinite;
+  z-index: 1; /* sous le contenu */
+}
+.bubble.b1 { left: 8%; bottom: 12%; animation-delay: 0.2s; }
+.bubble.b2 { left: 18%; bottom: 25%; animation-delay: 0.6s; }
+.bubble.b3 { left: 28%; bottom: 18%; animation-delay: 1.0s; }
+.bubble.b4 { right: 10%; top: 18%; animation-delay: 0.4s; }
+.bubble.b5 { right: 16%; top: 30%; animation-delay: 0.9s; }
+
+/* Effets sur les titres et sections */
+header h1 { animation: titleShake 1.2s ease-in-out 1; }
+h2 { animation: titleShake 1.2s ease-in-out 1; }
+section { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+section:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+
+/* Bouton avec halo Marvel */
+.btn-download { animation: pulseGlow 2.4s infinite; }
+.btn-download:hover { animation: none; }
+
+</style>
+</head>
+<body>
+<div class='bubble b1'></div><div class='bubble b2'></div><div class='bubble b3'></div><div class='bubble b4'></div><div class='bubble b5'></div>
+
+<header>
+    <h1>Aymen ABOU-EL KHAIR</h1>
+    <p>À la recherche d’un stage du 25 Mai au 26 Juin 2026 en réseaux ou cybersécurité à Villefranche sur Saône et ses alentours.</p>
+</header>
+<section>
+    <h2><img src='https://cdn-icons-png.flaticon.com/512/616/616494.png' alt='Iron Man'>Expériences</h2>
+<h3>Stagiaire - Chicken King (Mai 2021)</h3><ul><li>Renseignement des clients sur les plats et leur composition, notamment sur la présence d'allergènes.</li><li>Entretien des locaux, du matériel, des espaces et plans de travail, selon les procédures d'entretien du plan de nettoyage et de désinfection.</li><li>Accueil des clients, service et encaissement, remise en ordre de la salle à l'issue du service.</li></ul><h3>Animateur en centre de loisirs - Service Jeunesse (Avril 2024 - Présent)</h3><ul><li>Organisation des activités en respectant le programme et les contraintes horaires (repas, temps libre, animations, goûter, sorties).</li><li>Gestion des conflits entre les enfants, en jouant un rôle de médiateur.</li></ul>
+</section>
+<section>
+    <h2><img src='https://cdn-icons-png.flaticon.com/512/616/616490.png' alt='Spider-Man'>Engagement</h2>
+    <ul><li>Bénévole - ENGAGEMENT CITOYEN (Octobre 2024)</li><li>Participation à des récoltes de fonds pour la fondation La Croix Rouge Française.</li><li>Participation à une récolte de dons du sang.</li></ul>
+</section>
+<section>
+    <h2><img src='https://cdn-icons-png.flaticon.com/512/616/616495.png' alt='Thor'>Formation</h2>
+    <ul><li>BAFA (Brevet aux Aptitudes d’animateur) - Afocal</li><li>Baccalauréat - Lycée polyvalent Claude Bernard</li><li>BTS SIO (Service Informatique aux Organisations) - Campus Business-School</li></ul>
+</section>
+<section>
+    <h2><img src='https://cdn-icons-png.flaticon.com/512/616/616497.png' alt='Hulk'>Compétences</h2>
+    <ul><li>Connaissances en matière de matériel informatique et de logiciels</li><li>Analyse des besoins utilisateurs</li><li>Compétences en matière de dépannage informatique</li><li>Solides compétences en communication et en résolution de problèmes</li><li>Connaissance du pack Office 365</li><li>Installation et configuration de postes de travail en réseau</li><li>Mise en place de serveurs de base (DNS, Messagerie)</li><li>Gestion simple des droits d'accès (dossiers partagés, utilisateurs)</li><li>Suivi et résolution d'incidents réseau (Wi-Fi, connectivité, IP)</li><li>Utilisation de machines virtuelles (Création, Configuration)</li></ul>
+</section>
+<section>
+    <h2><img src='https://cdn-icons-png.flaticon.com/512/616/616493.png' alt='Captain Marvel'>Langues</h2>
+    <ul><li>Anglais B2</li><li>Espagnol B2</li></ul>
+</section>
+<div style='text-align:center;'>
+    <a href='CV stage.pdf' class='btn-download' download>Télécharger le CV en PDF</a>
+</div>
+</body>
+</html>
