@@ -1,0 +1,63 @@
+/* ==== STYLE POUR LA PHOTO DE NATHAN ==== */
+
+/* Bloc contenant ta photo */
+#PANNETIER {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 10px;
+
+    /* Fond stylé derrière la photo */
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    border: 3px solid #3b82f6;
+}
+
+/* Halo lumineux */
+#PANNETIER::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    background: radial-gradient(circle at center,
+        rgba(255,255,255,0.25),
+        rgba(59,130,246,0.3),
+        transparent 80%
+    );
+    filter: blur(6px);
+    z-index: 1;
+    opacity: 0.8;
+}
+
+/* Image */
+#PANNETIER img {
+    width: 100%;
+    height: auto;
+
+    /* Image ronde */
+    border-radius: 9999px;
+
+    position: relative;
+    z-index: 2;
+
+    /* Pas de rotation au départ */
+    transform: rotate(0deg);
+
+    /* Transition douce */
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+/* Effet au survol : zoom + rotation continue */
+#PANNETIER:hover img {
+    transform: scale(1.05);
+    animation: rotatePhoto 4s linear infinite;
+    filter: brightness(1.1);
+}
+
+#PANNETIER:hover::before {
+    filter: blur(10px) brightness(1.2);
+}
+
+/* Animation utilisée au survol */
+@keyframes rotatePhoto {
+    from { transform: rotate(0deg) scale(1.05); }
+    to   { transf
