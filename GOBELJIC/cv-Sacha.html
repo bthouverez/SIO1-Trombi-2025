@@ -1,251 +1,462 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Sacha Gobeljic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.1.0/css/flag-icons.min.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sacha Gobeljic – CV</title>
+    <meta name="description" content="CV de Sacha Gobeljic – Étudiant, recherche de stage (25 mai - 26 juin 2026)" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #0e021b 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
 
-body {
-    background: #eee;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+      animation: slideIn 0.8s ease-out;
+    }
 
-.cv {
-    width: 1000px;
-    background: white;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-}
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-/* LEFT COLUMN */
-.left {
-    width: 33%;
-    background: #1f1f1f;
-    color: white;
-    padding: 35px 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.photo img {
-    width: 100%;
-    border-radius: 5px;
-}
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
 
-.section-title {
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
-}
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-.left ul {
-    list-style: none;
-    margin-left: 10px;
-}
+    .header-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-.left li {
-    margin: 6px 0;
-}
+    .photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      animation: float 3s ease-in-out infinite;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-/* RIGHT COLUMN */
-.right {
-    width: 67%;
-    padding: 40px 50px;
-}
+    .photo:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
 
-.header h1 {
-    font-size: 45px;
-    line-height: 1.1;
-}
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
 
-.header h1 span {
-    font-weight: 900;
-}
+    .title-block {
+      flex: 1;
+    }
 
-.header h3 {
-    margin-top: 8px;
-    font-size: 18px;
-    font-weight: normal;
-}
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: fadeInLeft 1s ease-out;
+    }
 
-.stage {
-    margin-top: 40px;
-}
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-.spacing {
-    letter-spacing: 4px;
-    line-height: 1.7;
-    font-size: 18px;
-}
+    .subtitle {
+      font-size: 1.3em;
+      opacity: 0.95;
+      animation: fadeInLeft 1s ease-out 0.2s both;
+    }
 
-hr {
-    margin: 35px 0;
-    border: none;
-    border-top: 1px solid #aaa;
-}
+    .stage-info {
+      background: rgba(255,255,255,0.2);
+      padding: 15px 25px;
+      border-radius: 10px;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
+      animation: fadeInLeft 1s ease-out 0.4s both;
+    }
 
-.right-title {
-    font-size: 14px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-}
+    .btn-download {
+      display: inline-block;
+      background: white;
+      color: #667eea;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
 
-.experience {
-    margin-bottom: 28px;
-}
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
 
-.experience h3 {
-    font-size: 20px;
-    font-weight: bold;
-}
+    .btn-download:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
 
-.year {
-    color: #555;
-    margin-bottom: 5px;
-}
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 0;
+    }
 
-.experience ul {
-    margin-left: 20px;
-}
+    @media (max-width: 768px) {
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.interets {
-    margin-left: 20px;
-    margin-top: 10px;
-}
+    .sidebar {
+      background: #f8f9fa;
+      padding: 40px 30px;
+    }
 
-.interets li {
-    margin: 6px 0;
-}
+    .main-content {
+      padding: 40px;
+    }
 
-/* CLEAN LIST STYLE */
-ul li {
-    list-style-type: disc;
-}
-.left ul li {
-    list-style-type: none;
-}
-</style>
+    .section {
+      margin-bottom: 35px;
+      animation: fadeInUp 0.6s ease-out both;
+      animation-delay: calc(var(--index) * 0.1s);
+    }
 
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-title {
+      font-size: 1.3em;
+      color: #667eea;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #667eea;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title .emoji {
+      font-size: 1.2em;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-list li:hover {
+      transform: translateX(10px);
+    }
+
+    .contact-list a {
+      color: #333;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .contact-list a:hover {
+      color: #667eea;
+    }
+
+    .list {
+      list-style: none;
+    }
+
+    .list li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .list li:hover {
+      padding-left: 35px;
+      color: #667eea;
+    }
+
+    .list li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid #667eea;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+
+    .card ul li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+
+    .date {
+      color: #666;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .highlight {
+      background: none;
+      color: #f3f6fb;
+      -webkit-text-fill-color: #f3f6fb;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+      font-weight: 800;
+    }
+  </style>
 </head>
 <body>
-
-<div class="cv">
-
-    <!-- LEFT COLUMN -->
-    <aside class="left">
-        <div class="photo">
-            <img src="photo-Sacha.jpg" 
-     alt="Photo" 
-     style="width:100%; border-radius:5px;">
-
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <img src="photo-Sacha.jpg" alt="Photo de Sacha Gobeljic" class="photo">
+        
+        <div class="title-block">
+          <h1>Sacha <span class="highlight">GOBELJIC</span></h1>
+          <p class="subtitle">🎓 Étudiant – 19 ans</p>
+          <div class="stage-info">
+            <strong>🔍 Recherche de stage</strong><br>
+            📅 Du <strong>25 mai</strong> au <strong>26 juin 2026</strong>
+          </div>
+          <a class="btn-download" href="cv.pdf" download>
+            📥 Télécharger mon CV (PDF)
+          </a>
         </div>
+      </div>
+    </header>
 
-        <h2 class="section-title">CONTACT</h2>
-        <ul class="contact">
-            <li>📞 +33 7 87 76 29 41</li>
-            <li>📧 sacha.gobeljic@gmail.com</li>
-            <li>📍 Villefranche-sur-saône</li>
-        </ul>
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <section class="section" style="--index: 0">
+          <h2 class="section-title">
+            <span class="emoji">📞</span> CONTACT
+          </h2>
+          <ul class="contact-list">
+            <li><a href="tel:+33787762941">📱 +33 7 87 76 29 41</a></li>
+            <li><a href="mailto:sacha.gobeljic@gmail.com">✉️ sacha.gobeljic@gmail.com</a></li>
+            <li><a href="https://www.google.com/maps/search/Villefranche-sur-saône" target="_blank" rel="noopener">📍 Villefranche-sur-saône</a></li>
+          </ul>
+        </section>
 
-        <h2 class="section-title">FORMATIONS</h2>
-        <div class="block">
-            <p><strong>BTS SIO (Service Informatique aux Organisations)</strong><br>
-            <em>Campus Business-School (69)</em></p><br>
+        <section class="section" style="--index: 1">
+          <h2 class="section-title">
+            <span class="emoji">🌍</span> LANGAGES
+          </h2>
+          <ul class="list">
+            <span class="fi fi-fr"></span> Français - C2 <br>
+            <span class="fi fi-gb"></span> Anglais - C1 <br>
+            <span class="fi fi-es"></span> Espagnol - B2<br>
+            <span class="fi fi-rs"></span> Serbe - C2 <br>
+            </ul>
+        </section>
 
-            <p><strong>Baccalauréat</strong><br>
-            <em>Lycée International Ferney-Voltaire (01)</em></p>
-        </div>
-
-        <h2 class="section-title">COMPÉTENCES</h2>
-        <ul class="skills">
-            <li>Configuration + utilisation VM (Windows, Linux)</li>
-            <li>Résolution incidents réseau (Wi-Fi, IP, connectivité)</li>
-            <li>Gestion droits d’accès (partages, utilisateurs)</li>
+        <section class="section" style="--index: 2">
+          <h2 class="section-title">
+            <span class="emoji">💻</span> COMPÉTENCES
+          </h2>
+          <ul class="list">
+            <li>Configuration & utilisation VM (Windows, Linux)</li>
+            <li>Résolution incidents réseau (Wi‑Fi, IP)</li>
+            <li>Gestion droits d'accès (partages, utilisateurs)</li>
             <li>Mise en place serveurs de base (DNS)</li>
             <li>Pack Office365</li>
-            <li>Analyse besoins utilisateurs</li>
+            <li>Analyse des besoins utilisateurs</li>
             <li>Communication & résolution de problèmes</li>
-        </ul>
+          </ul>
+        </section>
 
-        <h2 class="section-title">LANGAGES</h2>
-        <ul class="langues">
-            <li>Français – C2</li>
-            <li>Anglais – C1</li>
-            <li>Espagnol – B2</li>
-            <li>Serbe – C2</li>
-        </ul>
-    </aside>
+        <section class="section" style="--index: 3">
+          <h2 class="section-title">
+            <span class="emoji">🎯</span> Centres d'intérêts
+          </h2>
+          <ul class="list">
+            <li>⚽ Sport</li>
+            <li>💻 Informatique</li>
+            <li>🎵 Musique</li>
+            <li>📚 Histoire</li>
+          </ul>
+        </section>
+      </aside>
 
-    <!-- RIGHT COLUMN -->
-    <main class="right">
-        <div class="header">
-            <h1>SACHA<br><span>GOBELJIC</span></h1>
-            <h3>Étudiant (19 ans)</h3>
-        </div>
+      <main class="main-content">
+        <section class="section" style="--index: 4">
+          <h2 class="section-title">
+            <span class="emoji">🎓</span> FORMATIONS
+          </h2>
+          <div class="card">
+            <h3>📘 BTS SIO (Service Informatique aux Organisations)</h3>
+            <p class="date">Campus Business-School (69)</p>
+          </div>
 
-        <div class="stage">
-            <h2 class="spacing">RECHERCHE DE<br>STAGE DU 25 MAI<br>AU 26 JUIN 2026</h2>
-        </div>
+          <div class="card">
+            <h3>🎓 Baccalauréat</h3>
+            <p class="date">Lycée International Ferney-Voltaire (01)</p>
+          </div>
+        </section>
 
-        <hr>
+        <section class="section" style="--index: 5">
+          <h2 class="section-title">
+            <span class="emoji">💼</span> EXPÉRIENCES
+          </h2>
 
-        <h2 class="section-title right-title">EXPERIENCES</h2>
-
-        <div class="experience">
-            <h3>Capitaine et Manager Esport</h3>
-            <p class="year">2023 - Aujourd’hui</p>
+          <div class="card">
+            <h3>🎮 Capitaine et Manager Esport <span class="date">– 2023 - Aujourd'hui</span></h3>
             <ul>
-                <li>Gérer et organiser une équipe</li>
-                <li>Gérer les imprévus</li>
-                <li>Créer des relations Organisation - Joueurs</li>
+              <li>Gérer et organiser une équipe</li>
+              <li>Gérer les imprévus</li>
+              <li>Créer des relations Organisation - Joueurs</li>
             </ul>
-        </div>
+          </div>
 
-        <div class="experience">
-            <h3>Quent & Cam’s Déco - Cessy (France)</h3>
-            <p class="year">Été 2023</p>
+          <div class="card">
+            <h3>🏠 Quent & Cam's Déco - Cessy (France) <span class="date">– Été 2023</span></h3>
             <ul>
-                <li>Mise en pratique de traitement de façades</li>
-                <li>Rénovation sur chantier (clients particuliers)</li>
+              <li>Mise en pratique de traitement de façades</li>
+              <li>Rénovation sur chantier (clients particuliers)</li>
             </ul>
-        </div>
+          </div>
 
-        <div class="experience">
-            <h3>CACEIS Switzerland Nyon (Suisse)</h3>
-            <p class="year">Été 2021</p>
+          <div class="card">
+            <h3>🏢 CACEIS Switzerland, Nyon (Suisse) <span class="date">– Été 2021</span></h3>
             <ul>
-                <li>Gestion hardware du service IT</li>
-                <li>Opérations dans la valorisation de fonds</li>
-                <li>Classifications de diverses archives</li>
-                <li>Réception à l’accueil</li>
+              <li>Gestion hardware du service IT</li>
+              <li>Opérations dans la valorisation de fonds</li>
+              <li>Classifications de diverses archives</li>
+              <li>Réception à l'accueil</li>
             </ul>
-        </div>
+          </div>
+        </section>
+      </main>
+    </div>
 
-        <hr>
-
-        <h2 class="section-title right-title">Centres d’intérêts</h2>
-
-        <ul class="interets">
-            <li>Sport</li>
-            <li>Informatique</li>
-            <li>Musique</li>
-            <li>Histoire</li>
-        </ul>
-
-    </main>
-</div>
-
+    <footer>
+      <p>© Sacha Gobeljic – CV – Disponible en téléchargement 🚀</p>
+    </footer>
+  </div>
 </body>
 </html>
